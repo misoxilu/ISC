@@ -1,0 +1,57 @@
+﻿<UserControl x:Class="ISC.View.Toolbars.EbtView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="100" d:DesignWidth="900">
+    <UserControl.Resources>
+        <Image x:Key="New" Source="{StaticResource I_New}"/>
+        <Image x:Key="Open" Source="{StaticResource I_Open}"/>
+        <Image x:Key="Save" Source="{StaticResource I_Save}"/>
+        <Image x:Key="Printer" Source="{StaticResource I_Printer}"/>
+        <Image x:Key="PrintPreview" Source="{StaticResource I_PrintPreview}"/>
+        <Image x:Key="Cut" Source="{StaticResource I_Cut}"/>
+        <Image x:Key="Copy" Source="{StaticResource I_Copy}"/>
+        <Image x:Key="Paste" Source="{StaticResource I_Paste}"/>
+        <Image x:Key="Delete" Source="{StaticResource I_Delete}"/>
+        <Image x:Key="Undo" Source="{StaticResource I_Undo}"/>
+        <Image x:Key="Redo" Source="{StaticResource I_Redo}"/>
+        <Image x:Key="File" Source="{StaticResource I_File}"/>
+    </UserControl.Resources>
+    <ToolBarTray>
+        <ToolBar  Background="{StaticResource WathetColor2}">
+            <Button Width="30" Height="30" Content="{StaticResource New}"/>
+            <Button Width="30" Height="30" Content="{StaticResource Open}"/>
+            <Button Width="30" Height="30" Content="{StaticResource Save}"/>
+                <Separator/>
+            <Button Width="30" Height="30" Content="{StaticResource Printer}"/>
+            <Button Width="30" Height="30"  Content="{StaticResource PrintPreview}"/>
+            <Separator/>
+            <Button Width="30" Height="30" Content="{StaticResource Cut}"/>
+            <Button Width="30" Height="30" Content="{StaticResource Copy}"/>
+            <Button Width="30" Height="30" Content="{StaticResource Paste}"/>
+            <Button Width="30" Height="30" Content="{StaticResource Delete}"/>
+            <Separator/>
+            <Button Width="30" Height="30" Content="{StaticResource Undo}"/>
+            <Button Width="30" Height="30" Content="{StaticResource Redo}"/>
+        </ToolBar>
+
+        <ToolBar>
+            <Button Width="30" Height="30" Content="{StaticResource File}"/>
+            <Button Width="30" Height="30" />
+            <Button Width="30" Height="30" />
+            <Separator/>
+            <Button Width="30" Height="30" />
+       
+            <Separator/>
+            <Button Width="30" Height="30"/>
+            <Button Width="30" Height="30" />
+            <Button Width="30" Height="30" />
+            <Button Width="30" Height="30"/>
+            <Separator/>
+            <Button Width="30" Height="30"/>
+            <Button Width="30" Height="30" />
+        </ToolBar>
+    </ToolBarTray>
+</UserControl>

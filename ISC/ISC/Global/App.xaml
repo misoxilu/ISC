@@ -1,0 +1,28 @@
+﻿<Application x:Class="ISC.Global.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:ISC.Global"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Global/Strings/InputGestureTexts.xaml"/>
+                <ResourceDictionary Source="/Global/Language/zh-CN.xaml"/>
+                <ResourceDictionary Source="/Global/Style/Brush.xaml"/>
+                <ResourceDictionary Source="/Global/Style/TextBlock.xaml"/>
+                <ResourceDictionary Source="/Global/Style/Paths.xaml"/>
+                <ResourceDictionary Source="/Global/Style/TextBox.xaml"/>
+                <ResourceDictionary Source="/Global/Style/ElipseCheckBox.xaml"/>
+                <ResourceDictionary Source="/Global/Style/Button.xaml"/>
+                <ResourceDictionary Source="/Global/Style/Expander.xaml"/>
+                <ResourceDictionary Source="/Global/Style/TreeView.xaml"/>
+                <ResourceDictionary Source="/Global/Style/ScrollBar.xaml"/>
+                <ResourceDictionary Source="/Global/Style/ToggleButton.xaml"/>
+                <ResourceDictionary Source="/Global/Style/ComboBox.xaml"/>
+                <ResourceDictionary Source="/Global/Icons/Icon.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+           
+            
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

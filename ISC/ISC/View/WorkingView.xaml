@@ -1,0 +1,68 @@
+﻿<UserControl 
+    x:Class="ISC.View.WorkingView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:local="clr-namespace:ISC.View"
+    xmlns:tool="clr-namespace:ISC.View.Toolbars"
+    xmlns:menu="clr-namespace:ISC.View.Menus"
+    xmlns:step="clr-namespace:ISC.View.StepContents"
+    mc:Ignorable="d" 
+    xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+    xmlns:vm="clr-namespace:ISC.ViewModel"
+    d:DesignHeight="600" d:DesignWidth="600">
+    <UserControl.DataContext>
+        <vm:WorkingViewmodel/>
+    </UserControl.DataContext>
+    <DockPanel LastChildFill="True">
+        <TabControl SelectedIndex="{Binding WorkingmodeSelectedIndex}" DockPanel.Dock="Top" >
+            <TabItem Height=".1">
+                <StackPanel>
+                    <menu:SsmView DataContext="{Binding SsmViewmodel}"/>
+                    <tool:EbtView/>
+                </StackPanel>
+            </TabItem>
+            <TabItem Height=".1">
+                <StackPanel>
+                    <menu:EbmView/>
+                    <tool:EbtView/>
+                </StackPanel>
+            </TabItem>
+            <TabItem Height=".1">
+                <StackPanel>
+                    
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+        <Grid x:Name="Grid">
+            <Grid.RowDefinitions>
+                <RowDefinition MinHeight="200" Height="{Binding FirstRowHeight}" />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            
+            <local:DockView x:Name="DockView" Grid.Row="0" DataContext="{Binding DockViewmodel}"/>
+            <GridSplitter Visibility="{Binding SecondRowVisibility}" Grid.Row="1" Background="{StaticResource GreenColor}" Height="3" VerticalAlignment="Center" HorizontalAlignment="Stretch"/>
+            <TabControl SelectedIndex="{Binding StepsIndex}" Grid.Row="2" Height="Auto">
+                <TabItem Width="0" Height=".1">
+                    <step:GetconnectedView DataContext="{Binding StepsViewmodel}"/>
+                </TabItem>
+               
+                <TabItem Width="0" Height=".1">
+                    <step:SetupimageView/>
+                </TabItem>
+
+                <TabItem Width="0" Height=".1">
+                    <step:LocatepartView DataContext="{Binding LocatepartViewmodel}"/>
+                </TabItem>
+            </TabControl>
+        </Grid>
+    </DockPanel>
+
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding Loaded}"/>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+</UserControl>
