@@ -70,6 +70,51 @@ namespace ISC.Properties {
         }
         
         /// <summary>
+        ///   查找类似 FileControlTemplate_List 的本地化字符串。
+        /// </summary>
+        internal static string FileControlTemplate_List {
+            get {
+                return ResourceManager.GetString("FileControlTemplate_List", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 FileControlTemplate_Tile 的本地化字符串。
+        /// </summary>
+        internal static string FileControlTemplate_Tile {
+            get {
+                return ResourceManager.GetString("FileControlTemplate_Tile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 FileDataTemplate_List 的本地化字符串。
+        /// </summary>
+        internal static string FileDataTemplate_List {
+            get {
+                return ResourceManager.GetString("FileDataTemplate_List", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 FileDataTemplate_Thumbnail 的本地化字符串。
+        /// </summary>
+        internal static string FileDataTemplate_Thumbnail {
+            get {
+                return ResourceManager.GetString("FileDataTemplate_Thumbnail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 FileDataTemplate_Tile 的本地化字符串。
+        /// </summary>
+        internal static string FileDataTemplate_Tile {
+            get {
+                return ResourceManager.GetString("FileDataTemplate_Tile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 FilePane 的本地化字符串。
         /// </summary>
         internal static string FilePane {

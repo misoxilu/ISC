@@ -19,10 +19,6 @@
             <HierarchicalDataTemplate.ItemTemplate >
                 <DataTemplate >
                     <DockPanel LastChildFill="True" VerticalAlignment="Center" Margin="10,0,0,0" ContextMenu="{StaticResource ContextMenu}">
-                        <DockPanel.InputBindings>
-                            <MouseBinding Gesture="RightClick" Command="{Binding DataContext.Click, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:LocatepartView}}}" CommandParameter="59"/>
-                        </DockPanel.InputBindings>
-
                         <Image Height="30" Source="{Binding Image}"/>
                         <TextBlock DockPanel.Dock="Left" Style="{StaticResource TextBlock}" VerticalAlignment="Center" Text="{Binding Name}" Margin="5,0,0,0"/>
                     </DockPanel>

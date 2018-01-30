@@ -1,24 +1,19 @@
 ﻿using ISC.Global.Common.Enumeration;
-using ISC.Model.Network;
+using ISC.Model.Working;
 using ISC.View;
-using ISC.View.Selections;
-using ISC.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using Xceed.Wpf.AvalonDock.Layout;
 
 namespace ISC.Global.Common
 {
-    static class General
+    public static partial class General
     {
-        public static WorkingMode WorkingMode { get; set; }
-
-        public static List<SensorGroup> SensorGroups { get; set; } = new List<SensorGroup>();
+        
 
         private static WorkingView workingView = new WorkingView();
 

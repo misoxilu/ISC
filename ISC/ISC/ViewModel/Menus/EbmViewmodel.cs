@@ -1,13 +1,8 @@
 ﻿using ISC.Global.Common;
 using ISC.Global.Common.Enumeration;
-using ISC.Model.Network;
+using ISC.Model.Working;
 using ISC.ViewModel.Base;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Media.Imaging;
 
 namespace ISC.ViewModel.Menus
 {

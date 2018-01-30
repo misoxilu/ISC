@@ -12,7 +12,8 @@
     <system:String x:Key="Chinese">Chinese</system:String>
     <system:String x:Key="English">English</system:String>
     <system:String x:Key="SwitchView">SwitchView</system:String>
-
+    
+    <system:String x:Key="L_Open">open</system:String>
     <system:String x:Key="L_Edge">edge</system:String>
     <system:String x:Key="L_Point">point</system:String>
     <system:String x:Key="L_Blob">blob</system:String>

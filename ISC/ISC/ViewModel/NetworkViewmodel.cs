@@ -1,11 +1,7 @@
 ﻿using ISC.Global.Common;
-using ISC.Model.Network;
-using System;
+using ISC.Model.Working;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Media.Imaging;
 
 namespace ISC.ViewModel
@@ -26,9 +22,9 @@ namespace ISC.ViewModel
             //this.SensorGroups = new List<SensorGroup> { new SensorGroup { Name = "In-Sight 传感器", SensorItems = sensorItems } };
             //this.RaisePropertyChanged(nameof(this.SensorGroups));
             
-            var sensorItems = new ObservableCollection<SensorItem> { new SensorItem { Name = "传感器A" }, new SensorItem { Name = "传感器B" } };
-            this.SensorGroups.Add(new SensorGroup { Name = "In-Sight 传感器", SensorItems = sensorItems });
-            this.RaisePropertyChanged(nameof(this.SensorGroups));
+            //var sensorItems = new ObservableCollection<SensorItem> { new SensorItem { Name = "传感器A" }, new SensorItem { Name = "传感器B" } };
+            //this.SensorGroups.Add(new SensorGroup { Name = "In-Sight 传感器", SensorItems = sensorItems });
+            //this.RaisePropertyChanged(nameof(this.SensorGroups));
         }
     }
 }

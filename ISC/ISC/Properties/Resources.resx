@@ -120,6 +120,21 @@
   <data name="DockView" xml:space="preserve">
     <value>DockView</value>
   </data>
+  <data name="FileControlTemplate_List" xml:space="preserve">
+    <value>FileControlTemplate_List</value>
+  </data>
+  <data name="FileControlTemplate_Tile" xml:space="preserve">
+    <value>FileControlTemplate_Tile</value>
+  </data>
+  <data name="FileDataTemplate_List" xml:space="preserve">
+    <value>FileDataTemplate_List</value>
+  </data>
+  <data name="FileDataTemplate_Thumbnail" xml:space="preserve">
+    <value>FileDataTemplate_Thumbnail</value>
+  </data>
+  <data name="FileDataTemplate_Tile" xml:space="preserve">
+    <value>FileDataTemplate_Tile</value>
+  </data>
   <data name="FilePane" xml:space="preserve">
     <value>FilePane</value>
   </data>

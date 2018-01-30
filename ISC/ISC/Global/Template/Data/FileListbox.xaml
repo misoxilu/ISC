@@ -1,0 +1,38 @@
+﻿<ResourceDictionary 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:view="clr-namespace:ISC.View">
+    
+    <DataTemplate x:Key="FileDataTemplate_Tile">
+        <StackPanel Orientation="Horizontal">
+            <Image Width="30" Height="30" Source="{Binding Image}"/>
+            <StackPanel Orientation="Vertical">
+                <TextBlock Style="{StaticResource TextBlock}" FontSize="13" Text="{Binding Name}"/>
+                <TextBlock Style="{StaticResource TextBlock}" FontSize="13" Foreground="{StaticResource GrayColor}" Text="{Binding Name}"/>
+            </StackPanel>
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate x:Key="FileDataTemplate_Thumbnail">
+        <StackPanel Orientation="Vertical">
+            <Image Width="80" Height="80" Source="{Binding Image}"/>
+            <TextBlock Style="{StaticResource TextBlock}" TextWrapping="Wrap" Width="70" FontSize="12" Text="{Binding Name}"/>
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate x:Key="FileDataTemplate_List">
+        <StackPanel Orientation="Horizontal" Background="#03000000" ContextMenu="{Binding DataContext.FileListboxItemContextMenu,RelativeSource={RelativeSource FindAncestor,AncestorType={x:Type view:FileView}}}">
+            <Image Width="30" Height="30" Source="{Binding Image}"/>
+            <TextBlock Style="{StaticResource TextBlock}"  FontSize="13" Text="{Binding Name}"/>
+            <StackPanel.InputBindings>
+                <MouseBinding Gesture="LeftDoubleClick" Command="{Binding DataContext.DoubleClick, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type view:FileView}}}" CommandParameter="{Binding ElementName=Listbox, Path=SelectedItem}" />
+            </StackPanel.InputBindings>
+            <!--<StackPanel.ContextMenu>
+                <ContextMenu >
+                    <MenuItem Header="打开"  />
+                </ContextMenu>
+            </StackPanel.ContextMenu>-->
+        </StackPanel>
+    </DataTemplate>
+</ResourceDictionary>

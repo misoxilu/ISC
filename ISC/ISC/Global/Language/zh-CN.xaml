@@ -12,7 +12,8 @@
     <system:String x:Key="Chinese">中文</system:String>
     <system:String x:Key="English">英文</system:String>
     <system:String x:Key="SwitchView">切换视图</system:String>
-
+    
+    <system:String x:Key="L_Open">打开</system:String>
     <system:String x:Key="L_Edge">边</system:String>
     <system:String x:Key="L_Point">点</system:String>
     <system:String x:Key="L_Blob">斑点</system:String>

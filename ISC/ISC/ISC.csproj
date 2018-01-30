@@ -93,15 +93,17 @@
     </ApplicationDefinition>
     <Compile Include="Global\Common\Enumeration\EventName.cs" />
     <Compile Include="Global\Common\Enumeration\FileType.cs" />
+    <Compile Include="Global\Common\Enumeration\LayoutType.cs" />
     <Compile Include="Global\Common\Enumeration\PaneState.cs" />
     <Compile Include="Global\Common\Enumeration\PartType.cs" />
     <Compile Include="Global\Common\Enumeration\WorkingMode.cs" />
     <Compile Include="Global\Common\EventHandlerArgs.cs" />
-    <Compile Include="Model\File.cs" />
+    <Compile Include="Global\Common\GeneralProperty.cs" />
+    <Compile Include="Model\Working\File.cs" />
     <Compile Include="Model\Locatepart\PartGroup.cs" />
     <Compile Include="Model\Locatepart\PartItem.cs" />
-    <Compile Include="Model\Network\SensorGroup.cs" />
-    <Compile Include="Model\Network\SensorItem.cs" />
+    <Compile Include="Model\Working\SensorGroup.cs" />
+    <Compile Include="Model\Working\SensorItem.cs" />
     <Compile Include="ViewModel\Base\RelayCommand.cs" />
     <Compile Include="ViewModel\Base\ViewModel.cs" />
     <Compile Include="Global\Common\Converter\Count2IsChecked.cs" />
@@ -113,7 +115,7 @@
     <Compile Include="ViewModel\NetworkViewmodel.cs" />
     <Compile Include="Global\Common\Interface\IViewSwitch.cs" />
     <Compile Include="ViewModel\MainWindowViewModel.cs" />
-    <Compile Include="ViewModel\StepContents\LocatepartBehavior.cs" />
+    <Compile Include="ViewModel\Base\Behavior.cs" />
     <Compile Include="ViewModel\StepContents\LocatepartViewmodel.cs" />
     <Compile Include="ViewModel\StepsViewmodel.cs" />
     <Compile Include="ViewModel\WorkingViewmodel.cs" />
@@ -162,6 +164,10 @@
     <Compile Include="View\WorkingView.xaml.cs">
       <DependentUpon>WorkingView.xaml</DependentUpon>
     </Compile>
+    <Page Include="Global\ContextMenu\SensorItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Global\Language\en-US.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -221,6 +227,14 @@
     <Page Include="Global\Style\TreeView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Global\Template\Control\FileListbox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Global\Template\Data\FileListbox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\DockView.xaml">
       <SubType>Designer</SubType>
@@ -423,6 +437,7 @@
     </Resource>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Model\Network\" />
     <Folder Include="ViewModel\Popups\" />
     <Folder Include="ViewModel\Selections\" />
     <Folder Include="View\Works\" />

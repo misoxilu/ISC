@@ -1,44 +1,39 @@
-﻿<UserControl 
-    x:Class="ISC.View.FileView"
+﻿<UserControl
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-    mc:Ignorable="d" 
+    xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+    xmlns:local="clr-namespace:ISC.View" 
+    x:Class="ISC.View.FileView" 
+    mc:Ignorable="d"
     d:DesignHeight="300" d:DesignWidth="300">
     <UserControl.Resources>
-        <ControlTemplate x:Key="ct1" TargetType="{x:Type ListBox}">
-            <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
-                <WrapPanel Orientation="Horizontal" IsItemsHost="True" ScrollViewer.CanContentScroll="True"/>
-            </ScrollViewer>
-        </ControlTemplate>
-
-        <ControlTemplate x:Key="default" TargetType="{x:Type ListBox}">
-            <Border x:Name="Bd" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Padding="1" SnapsToDevicePixels="true">
-                <ScrollViewer Focusable="false" Padding="{TemplateBinding Padding}">
-                    <ItemsPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
-                </ScrollViewer>
-            </Border>
-            <ControlTemplate.Triggers>
-
-                <MultiTrigger>
-                    <MultiTrigger.Conditions>
-                        <Condition Property="IsGrouping" Value="true"/>
-                        <Condition Property="VirtualizingPanel.IsVirtualizingWhenGrouping" Value="false"/>
-                    </MultiTrigger.Conditions>
-                    <Setter Property="ScrollViewer.CanContentScroll" Value="false"/>
-                </MultiTrigger>
-            </ControlTemplate.Triggers>
-        </ControlTemplate>
-
-        <DataTemplate x:Key="ListBox_File">
-            <StackPanel Orientation="Horizontal">
-                <Image Source="{Binding Image}"/>
-                <TextBlock Style="{StaticResource TextBlock}" Text="{Binding Name}"/>
+        <DataTemplate x:Key="FileDataTemplate_List1">
+            <StackPanel Orientation="Horizontal" Background="Green" >
+                <Image Width="30" Height="30" Source="{Binding Image}"/>
+                <TextBlock Style="{StaticResource TextBlock}"  FontSize="13" Text="{Binding Name}"/>
+                <StackPanel.InputBindings>
+                    <MouseBinding Gesture="LeftDoubleClick" Command="{Binding DataContext.DoubleClick, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:FileView}}}" CommandParameter="{Binding ElementName=Listbox, Path=SelectedItem}" />
+                </StackPanel.InputBindings>
             </StackPanel>
         </DataTemplate>
     </UserControl.Resources>
+
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding Loaded}"/>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
     <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
-        <ListBox ItemsSource="{Binding Files}" ItemTemplate="{StaticResource ListBox_File}"/>
+        <!--<ListBox ItemsSource="{Binding Files}" Template="{Binding FileListboxControlTemplate}" ItemTemplate="{Binding FileListboxDataTemplate}"/>-->
+        <ListBox x:Name="Listbox" ItemsSource="{Binding Files}" Template="{Binding FileListboxControlTemplate}" ItemTemplate="{Binding FileListboxDataTemplate}">
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="ListBoxItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                </Style>
+            </ListBox.ItemContainerStyle>
+        </ListBox>
     </ScrollViewer>
+
 </UserControl>

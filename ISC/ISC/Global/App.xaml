@@ -20,6 +20,9 @@
                 <ResourceDictionary Source="/Global/Style/ToggleButton.xaml"/>
                 <ResourceDictionary Source="/Global/Style/ComboBox.xaml"/>
                 <ResourceDictionary Source="/Global/Icons/Icon.xaml"/>
+                <ResourceDictionary Source="/Global/Template/Control/FileListbox.xaml"/>
+                <ResourceDictionary Source="/Global/Template/Data/FileListbox.xaml"/>
+                <ResourceDictionary Source="/Global/ContextMenu/SensorItem.xaml"/>
             </ResourceDictionary.MergedDictionaries>
            
             

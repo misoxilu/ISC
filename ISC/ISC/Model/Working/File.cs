@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Media.Imaging;
 
-namespace ISC.Model
+namespace ISC.Model.Working
 {
     public class File
     {
@@ -16,6 +16,10 @@ namespace ISC.Model
 
         public string Name { get; set; }
 
+        public File()
+        {
+
+        }
         public File(FileInfo fileInfo)
         {
             this.Name = fileInfo.Name;

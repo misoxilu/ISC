@@ -1,9 +1,12 @@
 ﻿using ISC.Global.Common;
 using ISC.Global.Common.Enumeration;
+using ISC.Model.Working;
 using ISC.ViewModel.Base;
 using ISC.ViewModel.Menus;
 using ISC.ViewModel.StepContents;
 using System;
+using System.Collections.Generic;
+using System.IO;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Imaging;
@@ -12,6 +15,8 @@ namespace ISC.ViewModel
 {
     public class WorkingViewmodel : Base.ViewModel
     {
+        public List<SensorGroup> SensorGroups { get; set; } = General.SensorGroups;
+
         private Grid grid;
 
         public int WorkingmodeSelectedIndex { get; set; }
@@ -43,14 +48,29 @@ namespace ISC.ViewModel
 
         public WorkingViewmodel()
         {
-            this.InitializeViews();
+            this.TestSensorGroup();
 
             this.SubscribeEvent();
         }
 
-        private void InitializeViews()
+        private void TestSensorGroup()
         {
-
+            this.SensorGroups.Add(new SensorGroup
+            {
+                SensorItems = new System.Collections.ObjectModel.ObservableCollection<SensorItem>
+                {
+                    new SensorItem{  Name="传感器1", Files=new List<Model.Working.File>
+                    {
+                        new Model.Working.File{ Name="模拟图片.bmp", Image=General.FindIcon("Image")},
+                        new Model.Working.File{ Name="模拟文本.txt", Image=General.FindIcon("Document")}
+                     }},
+                    new SensorItem{  Name="传感器2", Files=new List<Model.Working.File>
+                    {
+                        new Model.Working.File{ Name="模拟图片.bmp", Image=General.FindIcon("Image")}
+                    }}
+                }
+            });
+            this.RaisePropertyChanged(nameof(this.SensorGroups));
         }
 
         private void SubscribeEvent()
@@ -88,6 +108,7 @@ namespace ISC.ViewModel
             this.DockViewmodel.WorkingmodeSelectedIndex = 0;
             this.grid.RowDefinitions[0].Height = new GridLength(100, GridUnitType.Star);
             this.grid.RowDefinitions[1].Height = new GridLength(0, GridUnitType.Pixel);
+            this.grid.RowDefinitions[2].Height = new GridLength(0, GridUnitType.Pixel);
             this.SecondRowVisibility = Visibility.Hidden;
             this.RaisePropertiesChanged();
             General.SwitchPane(Properties.Resources.SelectionPane, PaneState.Hide);
@@ -99,6 +120,7 @@ namespace ISC.ViewModel
             this.DockViewmodel.WorkingmodeSelectedIndex = 1;
             this.grid.RowDefinitions[0].Height = new GridLength(0, GridUnitType.Auto);
             this.grid.RowDefinitions[1].Height = new GridLength(3, GridUnitType.Pixel);
+            this.grid.RowDefinitions[2].Height = new GridLength(200, GridUnitType.Pixel);
             this.SecondRowVisibility = Visibility.Visible;
 
 
