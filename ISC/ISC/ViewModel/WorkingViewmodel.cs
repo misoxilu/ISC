@@ -55,21 +55,16 @@ namespace ISC.ViewModel
 
         private void TestSensorGroup()
         {
-            this.SensorGroups.Add(new SensorGroup
-            {
-                SensorItems = new System.Collections.ObjectModel.ObservableCollection<SensorItem>
-                {
-                    new SensorItem{  Name="传感器1", Files=new List<Model.Working.File>
-                    {
-                        new Model.Working.File{ Name="模拟图片.bmp", Image=General.FindIcon("Image")},
-                        new Model.Working.File{ Name="模拟文本.txt", Image=General.FindIcon("Document")}
-                     }},
-                    new SensorItem{  Name="传感器2", Files=new List<Model.Working.File>
-                    {
-                        new Model.Working.File{ Name="模拟图片.bmp", Image=General.FindIcon("Image")}
-                    }}
-                }
-            });
+            var fileInfos = new System.IO.DirectoryInfo($"{Environment.CurrentDirectory}\\Global\\File\\SensorA").GetFiles();
+            var files = new List<Model.Working.File>(fileInfos.Length);
+            foreach (var item in fileInfos) files.Add(new Model.Working.File (item));
+            this.SensorGroups[0].SensorItems.Add(new SensorItem { Name = "SensorA", Files = files });
+
+            fileInfos = new System.IO.DirectoryInfo($"{Environment.CurrentDirectory}\\Global\\File\\SensorB").GetFiles();
+            files = new List<Model.Working.File>(fileInfos.Length);
+            foreach (var item in fileInfos) files.Add(new Model.Working.File(item));
+            this.SensorGroups[0].SensorItems.Add(new SensorItem { Name = "SensorB", Files = files });
+
             this.RaisePropertyChanged(nameof(this.SensorGroups));
         }
 

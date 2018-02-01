@@ -5,6 +5,8 @@ using ISC.Global.Common;
 using System.Windows.Controls;
 using ISC.Global.Common.Enumeration;
 using System.Windows;
+using System;
+
 
 namespace ISC.ViewModel
 {
@@ -21,11 +23,14 @@ namespace ISC.ViewModel
         public FileViewmodel()
         {
 
-            //DirectoryInfo folder = new DirectoryInfo(string.Format(Properties.Resources.FilePath, Environment.CurrentDirectory));
+            //System.IO.DirectoryInfo folder = new System.IO.DirectoryInfo(string.Format(Properties.Resources.FilePath, Environment.CurrentDirectory));
             //var files = folder.GetFiles();
-            //this.Files = new List<Model.Working.File>(files.Length);
-            //foreach (var file in files) this.Files.Add(new Model.Working.File(file));
-            //this.RaisePropertyChanged(nameof(this.Files));
+
+            //foreach (var file in files)
+            //{
+            //    var aaa = file;
+            //}
+
 
         }
 
@@ -33,18 +38,28 @@ namespace ISC.ViewModel
         {
             switch (option)
             {
-                case 0:
+                case -1:
                 {
                     var sensors = General.SensorGroups[0].SensorItems;
                     this.Files = new List<File>(sensors.Count);
-                    for (int i = 0; i < sensors.Count; i++)
+                    for (int i = 0; i < sensors.Count; i++) this.Files.Add(new File { Name = sensors[i].Name, Image = General.FindIconResource("I_Open") });
+                    this.FileListboxItemContextMenu = General.FindResource("SensorItem") as ContextMenu;
+                    break;
+                }
+                default:
+                {
+                    var files = General.SensorGroups[0].SensorItems[option].Files;
+                    this.Files = new List<File>(files.Count);
+                    for (int i = 0; i < files.Count; i++)
                     {
-                        this.Files.Add(new File { Name = sensors[i].Name, Image = General.FindIcon("Open") });
+                        this.Files.Add(new File { Name = files[i].Name, Image = files[i].Image });
                     }
+                    this.FileListboxItemContextMenu = General.FindResource("FileItem") as ContextMenu;
                     break;
                 }
             }
             this.RaisePropertyChanged(nameof(this.Files));
+            this.RaisePropertyChanged(nameof(this.FileListboxItemContextMenu));
         }
 
         private void ChangeControlTemplate(LayoutType layoutType)
@@ -94,16 +109,11 @@ namespace ISC.ViewModel
 
         public RelayCommand Loaded => new RelayCommand(() =>
         {
-            this.ChangeDataLayout(0);
+            this.ChangeDataLayout(-1);
             this.ChangeTemplate(LayoutType.List);
-
-            this.FileListboxItemContextMenu = General.FindResource("SensorItem") as ContextMenu;
         });
 
-        public RelayCommand DoubleClick => new RelayCommand((o) =>
-        {
-            var f = o as File;
-            MessageBox.Show(f.Name);
-        });
+
+        public RelayCommand Open => new RelayCommand((o) => { this.ChangeDataLayout(Convert.ToInt32(o)); });
     }
 }

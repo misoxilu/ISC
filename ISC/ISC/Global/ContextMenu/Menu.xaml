@@ -1,0 +1,19 @@
+﻿<ResourceDictionary 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vm="clr-namespace:ISC.ViewModel"
+    xmlns:view="clr-namespace:ISC.View">
+    
+    <vm:FileViewmodel x:Key="FileViewmodel"/>
+
+    <ContextMenu x:Key="SensorItem" DataContext="{Binding Path=PlacementTarget.Tag, RelativeSource={RelativeSource Self}}">
+        <MenuItem Header="{DynamicResource L_Open}"  Command="{Binding Open}" />
+    </ContextMenu>
+
+    <ContextMenu x:Key="FileItem" DataContext="{Binding Path=PlacementTarget.Tag, RelativeSource={RelativeSource Self}}">
+        <MenuItem Header="查看"  Command="{Binding }"/>
+        <MenuItem Header="创建报告"  Command="{Binding DataContext.Open, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type view:FileView}}}" CommandParameter="{Binding ElementName=Listbox, Path=SelectedIndex}" />
+        <MenuItem Header="备份"  Command="{Binding DataContext.Open, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type view:FileView}}}" CommandParameter="{Binding ElementName=Listbox, Path=SelectedIndex}" />
+        <MenuItem Header="恢复"  Command="{Binding DataContext.Open, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type view:FileView}}}" CommandParameter="{Binding ElementName=Listbox, Path=SelectedIndex}" />
+    </ContextMenu>
+</ResourceDictionary>

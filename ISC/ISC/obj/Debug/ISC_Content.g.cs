@@ -22,8 +22,6 @@
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("global/icons/document.ico")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("global/icons/file.ico")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("global/icons/image.ico")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("global/file/bitmap1.bmp")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("global/file/textfile1.txt")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("global/icons/network.ico")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("global/icons/network2.ico")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("global/icons/new.ico")]

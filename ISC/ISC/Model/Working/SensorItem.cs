@@ -3,19 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Media.Imaging;
 
 namespace ISC.Model.Working
 {
     public class SensorItem : Base.Notify
     {
-        private string name;
+        public string Name { get; set; }
 
-        public string Name
-        {
-            get { return name; }
-            set { name = value; this.RaisePropertyChanged(nameof(Name)); }
-        }
+        public BitmapImage Image { get; set; }
+
+        public string Path { get; set; }
 
         public List<File> Files { get; set; }
+
+
     }
 }

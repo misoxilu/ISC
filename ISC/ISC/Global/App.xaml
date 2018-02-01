@@ -22,7 +22,7 @@
                 <ResourceDictionary Source="/Global/Icons/Icon.xaml"/>
                 <ResourceDictionary Source="/Global/Template/Control/FileListbox.xaml"/>
                 <ResourceDictionary Source="/Global/Template/Data/FileListbox.xaml"/>
-                <ResourceDictionary Source="/Global/ContextMenu/SensorItem.xaml"/>
+                <ResourceDictionary Source="/Global/ContextMenu/Menu.xaml"/>
             </ResourceDictionary.MergedDictionaries>
            
             

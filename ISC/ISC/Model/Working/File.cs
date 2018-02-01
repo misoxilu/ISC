@@ -1,11 +1,5 @@
 ﻿using ISC.Global.Common;
-using ISC.Global.Common.Enumeration;
-using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Media.Imaging;
 
 namespace ISC.Model.Working
@@ -14,7 +8,11 @@ namespace ISC.Model.Working
     {
         public BitmapImage Image { get; set; }
 
+        public BitmapImage Thumbnail { get; set; }
+
         public string Name { get; set; }
+
+        public string TypeName { get; set; }
 
         public File()
         {
@@ -26,12 +24,30 @@ namespace ISC.Model.Working
             var image = string.Empty;
             switch (fileInfo.Extension)
             {
-                case ".bmp": { image ="Image"; break; }
-                case ".txt": { image = "Document"; break; }
-                default: { image ="Application"; break; }
+                case ".bmp":
+                {
+                    image ="Image";
+                    //this.Thumbnail = new BitmapImage(new Uri(fileInfo.FullName));
+                    TypeName = "BMP 文件";
+                    break;
+                }
+                case ".txt":
+                {
+                    image = "Document";
+                    TypeName = "文本文档";
+                    break;
+                }
+                case ".jpg":
+                default:
+                {
+                    image ="Image";
+                    TypeName = "JPG 文件";
+                    break;
+                }
             }
 
             this.Image= General.FindIcon(image);
+            
         }
     }
 }

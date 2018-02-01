@@ -164,7 +164,7 @@
     <Compile Include="View\WorkingView.xaml.cs">
       <DependentUpon>WorkingView.xaml</DependentUpon>
     </Compile>
-    <Page Include="Global\ContextMenu\SensorItem.xaml">
+    <Page Include="Global\ContextMenu\Menu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -385,12 +385,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Global\Icons\Image.ico">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Global\File\Bitmap1.bmp">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Global\File\TextFile1.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Global\Icons\Network.ico">

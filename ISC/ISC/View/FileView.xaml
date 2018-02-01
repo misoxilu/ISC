@@ -7,17 +7,14 @@
     xmlns:local="clr-namespace:ISC.View" 
     x:Class="ISC.View.FileView" 
     mc:Ignorable="d"
+    xmlns:vm="clr-namespace:ISC.ViewModel"
     d:DesignHeight="300" d:DesignWidth="300">
     <UserControl.Resources>
-        <DataTemplate x:Key="FileDataTemplate_List1">
-            <StackPanel Orientation="Horizontal" Background="Green" >
-                <Image Width="30" Height="30" Source="{Binding Image}"/>
-                <TextBlock Style="{StaticResource TextBlock}"  FontSize="13" Text="{Binding Name}"/>
-                <StackPanel.InputBindings>
-                    <MouseBinding Gesture="LeftDoubleClick" Command="{Binding DataContext.DoubleClick, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:FileView}}}" CommandParameter="{Binding ElementName=Listbox, Path=SelectedItem}" />
-                </StackPanel.InputBindings>
-            </StackPanel>
-        </DataTemplate>
+        <vm:FileViewmodel x:Key="Viewmodl"/>
+
+        <ContextMenu x:Key="Menu" >
+            <MenuItem Header="{DynamicResource L_Open}"  Command="{Binding Source={StaticResource Viewmodl},Path=Open}" />
+        </ContextMenu>
     </UserControl.Resources>
 
     <i:Interaction.Triggers>
@@ -26,7 +23,6 @@
         </i:EventTrigger>
     </i:Interaction.Triggers>
     <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
-        <!--<ListBox ItemsSource="{Binding Files}" Template="{Binding FileListboxControlTemplate}" ItemTemplate="{Binding FileListboxDataTemplate}"/>-->
         <ListBox x:Name="Listbox" ItemsSource="{Binding Files}" Template="{Binding FileListboxControlTemplate}" ItemTemplate="{Binding FileListboxDataTemplate}">
             <ListBox.ItemContainerStyle>
                 <Style TargetType="ListBoxItem">
@@ -34,6 +30,29 @@
                 </Style>
             </ListBox.ItemContainerStyle>
         </ListBox>
+
+        <!--<ListBox x:Name="Listbox" ItemsSource="{Binding Files}" Template="{Binding FileListboxControlTemplate}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Name}" Tag="{Binding DataContext, RelativeSource={RelativeSource AncestorType={x:Type ListBox}}}">
+                        <TextBlock.ContextMenu>
+                            <ContextMenu DataContext="{Binding Path=PlacementTarget.Tag, RelativeSource={RelativeSource Self}}">
+                                <MenuItem Header="Cut" Command="{Binding Open}" CommandParameter="{Binding }"/>
+                                <MenuItem Header="Copy"  />
+                                <MenuItem Header="Paste" />
+                            </ContextMenu>
+                        </TextBlock.ContextMenu>
+
+                    </TextBlock>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="ListBoxItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+
+                </Style>
+            </ListBox.ItemContainerStyle>
+        </ListBox>-->
     </ScrollViewer>
 
 </UserControl>

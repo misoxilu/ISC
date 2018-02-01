@@ -88,6 +88,11 @@ namespace ISC.Global.Common
             return new BitmapImage(new Uri(string.Format(Properties.Resources.IconPath, Environment.CurrentDirectory, iconName), UriKind.RelativeOrAbsolute));
         }
 
+        public static BitmapImage FindIconResource(string iconName)
+        {
+            return General.FindResource(iconName) as BitmapImage;
+        }
+
         public static object FindName(ContentControl view, string name)
         {
             return view.FindName(name);

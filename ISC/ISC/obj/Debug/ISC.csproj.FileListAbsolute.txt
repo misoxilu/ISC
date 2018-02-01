@@ -420,8 +420,6 @@ C:\zhaomin\sourcecode\Others\ISC\ISC\ISC\bin\Debug\Global\Icons\Delete.ico
 C:\zhaomin\sourcecode\Others\ISC\ISC\ISC\bin\Debug\Global\Icons\Document.ico
 C:\zhaomin\sourcecode\Others\ISC\ISC\ISC\bin\Debug\Global\Icons\File.ico
 C:\zhaomin\sourcecode\Others\ISC\ISC\ISC\bin\Debug\Global\Icons\Image.ico
-C:\zhaomin\sourcecode\Others\ISC\ISC\ISC\bin\Debug\Global\File\Bitmap1.bmp
-C:\zhaomin\sourcecode\Others\ISC\ISC\ISC\bin\Debug\Global\File\TextFile1.txt
 C:\zhaomin\sourcecode\Others\ISC\ISC\ISC\bin\Debug\Global\Icons\Network.ico
 C:\zhaomin\sourcecode\Others\ISC\ISC\ISC\bin\Debug\Global\Icons\Network2.ico
 C:\zhaomin\sourcecode\Others\ISC\ISC\ISC\bin\Debug\Global\Icons\New.ico
@@ -473,4 +471,4 @@ C:\zhaomin\sourcecode\Others\ISC\ISC\ISC\obj\Debug\ISC.csproj.GenerateResource.C
 C:\zhaomin\sourcecode\Others\ISC\ISC\ISC\obj\Debug\ISC.csproj.CoreCompileInputs.cache
 C:\zhaomin\sourcecode\Others\ISC\ISC\ISC\obj\Debug\Global\Template\Control\FileListbox.baml
 C:\zhaomin\sourcecode\Others\ISC\ISC\ISC\obj\Debug\Global\Template\Data\FileListbox.baml
-C:\zhaomin\sourcecode\Others\ISC\ISC\ISC\obj\Debug\Global\ContextMenu\SensorItem.baml
+C:\zhaomin\sourcecode\Others\ISC\ISC\ISC\obj\Debug\Global\ContextMenu\Menu.baml
