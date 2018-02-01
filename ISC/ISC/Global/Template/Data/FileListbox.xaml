@@ -3,37 +3,50 @@
     xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
-
-
     <DataTemplate x:Key="FileDataTemplate_Tile">
-        <StackPanel Orientation="Horizontal" Background="#03000000" ContextMenu="{Binding DataContext.FileListboxItemContextMenu,RelativeSource={RelativeSource FindAncestor,AncestorType={x:Type UserControl}}}">
-            <Image Width="30" Height="30" Source="{Binding Image}"/>
+        <StackPanel 
+            Orientation="Horizontal" Background="#03000000"
+            ContextMenu="{Binding DataContext.FileListboxItemContextMenu,RelativeSource={RelativeSource FindAncestor,AncestorType={x:Type UserControl}}}"
+            Tag="{Binding DataContext, RelativeSource={RelativeSource AncestorType={x:Type ListBox}}}">
+            <Image Width="30" Height="30" Source="{Binding Icon}"/>
             <StackPanel Orientation="Vertical">
                 <TextBlock Style="{StaticResource TextBlock}" FontSize="13" Text="{Binding Name}"/>
                 <TextBlock Style="{StaticResource TextBlock}" FontSize="13" Foreground="{StaticResource GrayColor}" Text="{Binding TypeName}"/>
             </StackPanel>
             <StackPanel.InputBindings>
-                <MouseBinding Gesture="LeftDoubleClick" Command="{Binding DataContext.DoubleClick, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}" CommandParameter="{Binding ElementName=Listbox, Path=SelectedIndex}" />
+                <MouseBinding 
+                    Gesture="LeftDoubleClick" 
+                    Command="{Binding DataContext.DoubleClick, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}"/>
             </StackPanel.InputBindings>
         </StackPanel>
     </DataTemplate>
 
     <DataTemplate x:Key="FileDataTemplate_Thumbnail">
-        <StackPanel Orientation="Vertical" Background="#03000000" ContextMenu="{Binding DataContext.FileListboxItemContextMenu,RelativeSource={RelativeSource FindAncestor,AncestorType={x:Type UserControl}}}">
-            <Image Width="80" Height="80" Source="{Binding Image}"/>
+        <StackPanel 
+            Orientation="Vertical" Background="#03000000" 
+            ContextMenu="{Binding DataContext.FileListboxItemContextMenu,RelativeSource={RelativeSource FindAncestor,AncestorType={x:Type UserControl}}}"
+            Tag="{Binding DataContext, RelativeSource={RelativeSource AncestorType={x:Type ListBox}}}">
+            <Image Width="80" Height="80" Source="{Binding Icon}"/>
             <TextBlock Style="{StaticResource TextBlock}" TextWrapping="Wrap" Width="70" FontSize="12" Text="{Binding Name}"/>
             <StackPanel.InputBindings>
-                <MouseBinding Gesture="LeftDoubleClick" Command="{Binding DataContext.DoubleClick, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}" CommandParameter="{Binding ElementName=Listbox, Path=SelectedIndex}" />
+                <MouseBinding 
+                    Gesture="LeftDoubleClick"
+                    Command="{Binding DataContext.DoubleClick, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}"  />
             </StackPanel.InputBindings>
         </StackPanel>
     </DataTemplate>
 
     <DataTemplate x:Key="FileDataTemplate_List" >
-        <StackPanel Orientation="Horizontal" Background="#03000000" ContextMenu="{Binding DataContext.FileListboxItemContextMenu,RelativeSource={RelativeSource FindAncestor,AncestorType={x:Type UserControl}}}" Tag="{Binding DataContext, RelativeSource={RelativeSource AncestorType={x:Type ListBox}}}">
-            <Image Width="30" Height="30" Source="{Binding Image}"/>
+        <StackPanel 
+            Orientation="Horizontal" Background="#03000000" 
+            ContextMenu="{Binding DataContext.FileListboxItemContextMenu,RelativeSource={RelativeSource FindAncestor,AncestorType={x:Type UserControl}}}" 
+            Tag="{Binding DataContext, RelativeSource={RelativeSource AncestorType={x:Type ListBox}}}">
+            <Image Width="30" Height="30" Source="{Binding Icon}"/>
             <TextBlock Style="{StaticResource TextBlock}" FontSize="13" Text="{Binding Name}"/>
             <StackPanel.InputBindings>
-                <MouseBinding Gesture="LeftDoubleClick" Command="{Binding DataContext.Open, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}" CommandParameter="{Binding ElementName=Listbox, Path=SelectedIndex}" />
+                <MouseBinding 
+                    Gesture="LeftDoubleClick" 
+                    Command="{Binding DataContext.Open, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}"/>
             </StackPanel.InputBindings>
         </StackPanel>
     </DataTemplate>

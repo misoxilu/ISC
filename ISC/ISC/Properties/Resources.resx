@@ -144,6 +144,9 @@
   <data name="IconPath" xml:space="preserve">
     <value>{0}\\Global\\Icons\\{1}.ico</value>
   </data>
+  <data name="I_Open" xml:space="preserve">
+    <value>I_Open</value>
+  </data>
   <data name="LanguageFilePath" xml:space="preserve">
     <value>/ISC;component/Global/Language/{0}.xaml</value>
   </data>

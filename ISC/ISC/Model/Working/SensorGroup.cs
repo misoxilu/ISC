@@ -8,12 +8,8 @@ using System.Windows.Media.Imaging;
 
 namespace ISC.Model.Working
 {
-   public class SensorGroup
+   public class SensorGroup:Item
     {
-        public string Name { get; set; }
-
-        public BitmapImage Image { get; set; }
-
-        public List<SensorItem> SensorItems { get; set; }
+        public List<Item> SensorItems { get; set; }
     }
 }

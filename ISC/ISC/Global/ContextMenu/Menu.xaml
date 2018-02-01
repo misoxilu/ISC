@@ -7,7 +7,7 @@
     <vm:FileViewmodel x:Key="FileViewmodel"/>
 
     <ContextMenu x:Key="SensorItem" DataContext="{Binding Path=PlacementTarget.Tag, RelativeSource={RelativeSource Self}}">
-        <MenuItem Header="{DynamicResource L_Open}"  Command="{Binding Open}" />
+        <MenuItem Header="{DynamicResource L_Open}"  Command="{Binding Open}"/>
     </ContextMenu>
 
     <ContextMenu x:Key="FileItem" DataContext="{Binding Path=PlacementTarget.Tag, RelativeSource={RelativeSource Self}}">

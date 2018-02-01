@@ -91,6 +91,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Global\Common\Enumeration\DirectoryRank.cs" />
     <Compile Include="Global\Common\Enumeration\EventName.cs" />
     <Compile Include="Global\Common\Enumeration\FileType.cs" />
     <Compile Include="Global\Common\Enumeration\LayoutType.cs" />
@@ -102,6 +103,7 @@
     <Compile Include="Model\Working\File.cs" />
     <Compile Include="Model\Locatepart\PartGroup.cs" />
     <Compile Include="Model\Locatepart\PartItem.cs" />
+    <Compile Include="Model\Working\Item.cs" />
     <Compile Include="Model\Working\SensorGroup.cs" />
     <Compile Include="Model\Working\SensorItem.cs" />
     <Compile Include="ViewModel\Base\RelayCommand.cs" />

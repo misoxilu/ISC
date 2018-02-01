@@ -133,6 +133,15 @@ namespace ISC.Properties {
         }
         
         /// <summary>
+        ///   查找类似 I_Open 的本地化字符串。
+        /// </summary>
+        internal static string I_Open {
+            get {
+                return ResourceManager.GetString("I_Open", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 {0}\\Global\\Icons\\{1}.ico 的本地化字符串。
         /// </summary>
         internal static string IconPath {

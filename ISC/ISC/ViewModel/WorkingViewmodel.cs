@@ -55,15 +55,10 @@ namespace ISC.ViewModel
 
         private void TestSensorGroup()
         {
-            var fileInfos = new System.IO.DirectoryInfo($"{Environment.CurrentDirectory}\\Global\\File\\SensorA").GetFiles();
-            var files = new List<Model.Working.File>(fileInfos.Length);
-            foreach (var item in fileInfos) files.Add(new Model.Working.File (item));
-            this.SensorGroups[0].SensorItems.Add(new SensorItem { Name = "SensorA", Files = files });
+           
+            this.SensorGroups[0].SensorItems.Add(new SensorItem ("SensorA", $"{ Environment.CurrentDirectory }\\Global\\File\\SensorA"));
 
-            fileInfos = new System.IO.DirectoryInfo($"{Environment.CurrentDirectory}\\Global\\File\\SensorB").GetFiles();
-            files = new List<Model.Working.File>(fileInfos.Length);
-            foreach (var item in fileInfos) files.Add(new Model.Working.File(item));
-            this.SensorGroups[0].SensorItems.Add(new SensorItem { Name = "SensorB", Files = files });
+            this.SensorGroups[0].SensorItems.Add(new SensorItem("SensorB", $"{ Environment.CurrentDirectory }\\Global\\File\\SensorB"));
 
             this.RaisePropertyChanged(nameof(this.SensorGroups));
         }
