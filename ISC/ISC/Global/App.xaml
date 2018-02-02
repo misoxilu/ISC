@@ -6,23 +6,23 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="/Global/Strings/InputGestureTexts.xaml"/>
-                <ResourceDictionary Source="/Global/Language/zh-CN.xaml"/>
-                <ResourceDictionary Source="/Global/Style/Brush.xaml"/>
-                <ResourceDictionary Source="/Global/Style/TextBlock.xaml"/>
-                <ResourceDictionary Source="/Global/Style/Paths.xaml"/>
-                <ResourceDictionary Source="/Global/Style/TextBox.xaml"/>
-                <ResourceDictionary Source="/Global/Style/ElipseCheckBox.xaml"/>
-                <ResourceDictionary Source="/Global/Style/Button.xaml"/>
-                <ResourceDictionary Source="/Global/Style/Expander.xaml"/>
-                <ResourceDictionary Source="/Global/Style/TreeView.xaml"/>
-                <ResourceDictionary Source="/Global/Style/ScrollBar.xaml"/>
-                <ResourceDictionary Source="/Global/Style/ToggleButton.xaml"/>
-                <ResourceDictionary Source="/Global/Style/ComboBox.xaml"/>
-                <ResourceDictionary Source="/Global/Icons/Icon.xaml"/>
-                <ResourceDictionary Source="/Global/Template/Control/FileListbox.xaml"/>
-                <ResourceDictionary Source="/Global/Template/Data/FileListbox.xaml"/>
-                <ResourceDictionary Source="/Global/ContextMenu/Menu.xaml"/>
+                <ResourceDictionary Source="/Global/Dictionary/String/InputGestureTexts.xaml"/>
+                <ResourceDictionary Source="/Global/Dictionary/Language/zh-CN.xaml"/>
+                <ResourceDictionary Source="/Global/Dictionary/Style/Brush.xaml"/>
+                <ResourceDictionary Source="/Global/Dictionary/Style/TextBlock.xaml"/>
+                <ResourceDictionary Source="/Global/Dictionary/Style/Paths.xaml"/>
+                <ResourceDictionary Source="/Global/Dictionary/Style/TextBox.xaml"/>
+                <ResourceDictionary Source="/Global/Dictionary/Style/ElipseCheckBox.xaml"/>
+                <ResourceDictionary Source="/Global/Dictionary/Style/Button.xaml"/>
+                <ResourceDictionary Source="/Global/Dictionary/Style/Expander.xaml"/>
+                <ResourceDictionary Source="/Global/Dictionary/Style/TreeView.xaml"/>
+                <ResourceDictionary Source="/Global/Dictionary/Style/ScrollBar.xaml"/>
+                <ResourceDictionary Source="/Global/Dictionary/Style/ToggleButton.xaml"/>
+                <ResourceDictionary Source="/Global/Dictionary/Style/ComboBox.xaml"/>
+                <ResourceDictionary Source="/Global/Dictionary/Icon.xaml"/>
+                <ResourceDictionary Source="/Global/Dictionary/Template/Control/FileListbox.xaml"/>
+                <ResourceDictionary Source="/Global/Dictionary/Template/Data/FileListbox.xaml"/>
+                <ResourceDictionary Source="/Global/Dictionary/Control/Menu.xaml"/>
             </ResourceDictionary.MergedDictionaries>
            
             

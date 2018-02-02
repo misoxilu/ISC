@@ -166,75 +166,75 @@
     <Compile Include="View\WorkingView.xaml.cs">
       <DependentUpon>WorkingView.xaml</DependentUpon>
     </Compile>
-    <Page Include="Global\ContextMenu\Menu.xaml">
+    <Page Include="Global\Dictionary\Control\Menu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Global\Language\en-US.xaml">
+    <Page Include="Global\Dictionary\Language\en-US.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Global\Language\zh-CN.xaml">
+    <Page Include="Global\Dictionary\Language\zh-CN.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Global\Style\Brush.xaml">
+    <Page Include="Global\Dictionary\Style\Brush.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Global\Style\Button.xaml">
+    <Page Include="Global\Dictionary\Style\Button.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Global\Style\ComboBox.xaml">
+    <Page Include="Global\Dictionary\Style\ComboBox.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Global\Style\ElipseCheckBox.xaml">
+    <Page Include="Global\Dictionary\Style\ElipseCheckBox.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Global\Style\Expander.xaml">
+    <Page Include="Global\Dictionary\Style\Expander.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Global\Icons\Icon.xaml">
+    <Page Include="Global\Dictionary\Icon.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Global\Style\Paths.xaml">
+    <Page Include="Global\Dictionary\Style\Paths.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Global\Style\ScrollBar.xaml">
+    <Page Include="Global\Dictionary\Style\ScrollBar.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Global\Strings\InputGestureTexts.xaml">
+    <Page Include="Global\Dictionary\String\InputGestureTexts.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Global\Style\TextBlock.xaml">
+    <Page Include="Global\Dictionary\Style\TextBlock.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Global\Style\TextBox.xaml">
+    <Page Include="Global\Dictionary\Style\TextBox.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Global\Style\ToggleButton.xaml">
+    <Page Include="Global\Dictionary\Style\ToggleButton.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Global\Style\TreeView.xaml">
+    <Page Include="Global\Dictionary\Style\TreeView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Global\Template\Control\FileListbox.xaml">
+    <Page Include="Global\Dictionary\Template\Control\FileListbox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Global\Template\Data\FileListbox.xaml">
+    <Page Include="Global\Dictionary\Template\Data\FileListbox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -347,88 +347,88 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Global\Dll\Microsoft.Expression.Interactions.dll">
+    <Content Include="Global\Resource\Dll\Microsoft.Expression.Interactions.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Global\Dll\System.Windows.Interactivity.dll">
+    <Content Include="Global\Resource\Dll\System.Windows.Interactivity.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Global\Dll\Xceed.Wpf.AvalonDock.dll">
+    <Content Include="Global\Resource\Dll\Xceed.Wpf.AvalonDock.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Global\Dll\Xceed.Wpf.AvalonDock.Themes.Aero.dll">
+    <Content Include="Global\Resource\Dll\Xceed.Wpf.AvalonDock.Themes.Aero.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Global\Dll\Xceed.Wpf.AvalonDock.Themes.Expression.dll">
+    <Content Include="Global\Resource\Dll\Xceed.Wpf.AvalonDock.Themes.Expression.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Global\Dll\Xceed.Wpf.AvalonDock.Themes.Metro.dll">
+    <Content Include="Global\Resource\Dll\Xceed.Wpf.AvalonDock.Themes.Metro.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Global\Dll\Xceed.Wpf.AvalonDock.Themes.VS2010.dll">
+    <Content Include="Global\Resource\Dll\Xceed.Wpf.AvalonDock.Themes.VS2010.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Global\Icons\Application.ico">
+    <Content Include="Global\Resource\Icons\Application.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Global\Icons\Copy.ico">
+    <Content Include="Global\Resource\Icons\Copy.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Global\Icons\Cut.ico">
+    <Content Include="Global\Resource\Icons\Cut.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Global\Icons\Delete.ico">
+    <Content Include="Global\Resource\Icons\Delete.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Global\Icons\Document.ico">
+    <Content Include="Global\Resource\Icons\Document.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Global\Icons\File.ico">
+    <Content Include="Global\Resource\Icons\File.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Global\Icons\Image.ico">
+    <Content Include="Global\Resource\Icons\Image.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Global\Icons\Network.ico">
+    <Content Include="Global\Resource\Icons\Network.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Global\Icons\Network2.ico">
+    <Content Include="Global\Resource\Icons\Network2.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Global\Icons\New.ico">
+    <Content Include="Global\Resource\Icons\New.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Global\Icons\Open.ico">
+    <Content Include="Global\Resource\Icons\Open.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Global\Icons\Open_dis.ico">
+    <Content Include="Global\Resource\Icons\Open_dis.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Global\Icons\Paste.ico">
+    <Content Include="Global\Resource\Icons\Paste.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Global\Icons\Printer.ico">
+    <Content Include="Global\Resource\Icons\Printer.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Global\Icons\PrintPreview.ico">
+    <Content Include="Global\Resource\Icons\PrintPreview.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Global\Icons\Redo.ico">
+    <Content Include="Global\Resource\Icons\Redo.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Global\Icons\Save.ico">
+    <Content Include="Global\Resource\Icons\Save.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Global\Icons\Settings.ico">
+    <Content Include="Global\Resource\Icons\Settings.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Global\Icons\Undo.ico">
+    <Content Include="Global\Resource\Icons\Undo.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Global\Icons\Video.ico">
+    <Content Include="Global\Resource\Icons\Video.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Resource Include="Global\Image\SplashScreen.jpg">
+    <Resource Include="Global\Resource\Image\SplashScreen.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>

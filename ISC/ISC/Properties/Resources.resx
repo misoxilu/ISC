@@ -142,13 +142,13 @@
     <value>{0}\\Global\\File</value>
   </data>
   <data name="IconPath" xml:space="preserve">
-    <value>{0}\\Global\\Icons\\{1}.ico</value>
+    <value>{0}\\Global\\Resource\\Icons\\{1}.ico</value>
   </data>
   <data name="I_Open" xml:space="preserve">
     <value>I_Open</value>
   </data>
   <data name="LanguageFilePath" xml:space="preserve">
-    <value>/ISC;component/Global/Language/{0}.xaml</value>
+    <value>/ISC;component/Global/Dictionary/Language/{0}.xaml</value>
   </data>
   <data name="NetworkPane" xml:space="preserve">
     <value>NetworkPane</value>
@@ -158,7 +158,7 @@
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="SplashScreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Global\Image\SplashScreen.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Global\Resource\Image\SplashScreen.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="StepView" xml:space="preserve">
     <value>StepView</value>

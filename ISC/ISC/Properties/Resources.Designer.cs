@@ -142,7 +142,7 @@ namespace ISC.Properties {
         }
         
         /// <summary>
-        ///   查找类似 {0}\\Global\\Icons\\{1}.ico 的本地化字符串。
+        ///   查找类似 {0}\\Global\\Resource\\Icons\\{1}.ico 的本地化字符串。
         /// </summary>
         internal static string IconPath {
             get {
@@ -151,7 +151,7 @@ namespace ISC.Properties {
         }
         
         /// <summary>
-        ///   查找类似 /ISC;component/Global/Language/{0}.xaml 的本地化字符串。
+        ///   查找类似 /ISC;component/Global/Dictionary/Language/{0}.xaml 的本地化字符串。
         /// </summary>
         internal static string LanguageFilePath {
             get {

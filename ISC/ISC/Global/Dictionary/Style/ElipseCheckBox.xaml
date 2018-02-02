@@ -1,0 +1,42 @@
+﻿<ResourceDictionary 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Global/Dictionary/Style/Brush.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style x:Key="ElipseCheckBox" TargetType="{x:Type CheckBox}">
+        <Style.Resources>
+        </Style.Resources>
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+        <Setter Property="Foreground" Value="{StaticResource GrayColor}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type CheckBox}">
+                    <Viewbox>
+                        <Canvas x:Name="templateRoot" Width="100" Height="100" Background="Transparent" SnapsToDevicePixels="True" Clip="M50,00 A50,50 0,1,1 40,1">
+                            <Ellipse x:Name="BackgroundColor" Fill="{StaticResource BlueColor}" Width="100" Height="100" StrokeThickness="4"/>
+                            <Path x:Name="Content" Visibility="Hidden" Stroke="White"  StrokeThickness="10" Data="M25,46 L40,60 70,30" Height="39.951" Canvas.Left="23.5" Stretch="Fill" Canvas.Top="28.5" Width="55.536"/>
+                            <ContentPresenter x:Name="contentPresenter"  Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Canvas>
+                    </Viewbox>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter TargetName="BackgroundColor" Property="Stroke" Value="White"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="true">
+                            <Setter Property="Foreground" Value="{StaticResource BlueColor}"/>
+                            <Setter TargetName="Content" Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="{x:Null}">
+                            <Setter TargetName="Content" Property="Visibility" Value="Hidden"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

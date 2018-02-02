@@ -1,0 +1,25 @@
+﻿<ResourceDictionary 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+
+    <BitmapImage x:Key="I_Network" UriSource="/ISC;component/Global/Resource/Icons/Network.ico" />
+    <BitmapImage x:Key="I_Network2" UriSource="/ISC;component/Global/Resource/Icons/Network2.ico" />
+    <BitmapImage x:Key="I_Open" UriSource="/ISC;component/Global/Resource/Icons/Open.ico" />
+    <BitmapImage x:Key="I_Cut" UriSource="/ISC;component/Global/Resource/Icons/Cut.ico" />
+    <BitmapImage x:Key="I_Save" UriSource="/ISC;component/Global/Resource/Icons/Save.ico" />
+    <BitmapImage x:Key="I_New" UriSource="/ISC;component/Global/Resource/Icons/New.ico" />
+    <BitmapImage x:Key="I_PrintPreview" UriSource="/ISC;component/Global/Resource/Icons/PrintPreview.ico" />
+    <BitmapImage x:Key="I_Printer" UriSource="/ISC;component/Global/Resource/Icons/Printer.ico" />
+    <BitmapImage x:Key="I_Copy" UriSource="/ISC;component/Global/Resource/Icons/Copy.ico" />
+    <BitmapImage x:Key="I_Paste" UriSource="/ISC;component/Global/Resource/Icons/Paste.ico" />
+    <BitmapImage x:Key="I_Delete" UriSource="/ISC;component/Global/Resource/Icons/Delete.ico" />
+    <BitmapImage x:Key="I_Undo" UriSource="/ISC;component/Global/Resource/Icons/Undo.ico" />
+    <BitmapImage x:Key="I_Redo" UriSource="/ISC;component/Global/Resource/Icons/Redo.ico" />
+    <BitmapImage x:Key="I_File" UriSource="/ISC;component/Global/Resource/Icons/File.ico" />
+    <BitmapImage x:Key="I_Edge" UriSource="/ISC;component/Global/Resource/Icons/File.ico" />
+    <BitmapImage x:Key="I_Point" UriSource="/ISC;component/Global/Resource/Icons/Cut.ico" />
+    <BitmapImage x:Key="I_Blob" UriSource="/ISC;component/Global/Resource/Icons/Delete.ico" />
+    
+    <!--<Image x:Key="Open" Source="Open.ico"/>-->
+</ResourceDictionary>
