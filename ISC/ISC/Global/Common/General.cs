@@ -57,7 +57,7 @@ namespace ISC.Global.Common
 
         public static void PopupView(string viewName)
         {
-            General.FindView(viewName, "ISC.View.Popups").ShowDialog();
+            General.FindView(viewName, Properties.Resources.PopupWindowPath).ShowDialog();
         }
 
         public static void ShowWorkingview(ContentControl contentControl)
@@ -108,6 +108,11 @@ namespace ISC.Global.Common
         public static void RaiseEventHandler(ViewModel.Base.ViewModel viewModel, EventName eventName, object value)
         {
             General.OnEventHandler(viewModel, new EventHandlerArgs(eventName, value));
+        }
+
+        public static T GetType<T>(string strType)
+        {
+            return (T)Enum.Parse(typeof(T), strType);
         }
     }
 }

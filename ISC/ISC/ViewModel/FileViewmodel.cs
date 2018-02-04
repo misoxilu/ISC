@@ -20,7 +20,9 @@ namespace ISC.ViewModel
 
         public DataTemplate FileListboxDataTemplate { get; set; }
 
-        public ContextMenu FileListboxItemContextMenu { get; set; }
+        public ContextMenu FileItemContextMenu { get; set; }
+
+        public ContextMenu FileBlankContextMenu { get; set; }
 
         public FileViewmodel() { }
 
@@ -31,7 +33,8 @@ namespace ISC.ViewModel
                 case DirectoryRank.Root:
                 {
                     this.Files = ((SensorItem)item).Files;// General.SensorGroups[0].SensorItems;
-                    this.FileListboxItemContextMenu = General.FindResource("FileItem") as ContextMenu;
+                    this.FileItemContextMenu = General.FindResource("FileItem") as ContextMenu;
+                    this.FileBlankContextMenu = General.FindResource("FileBlank") as ContextMenu;
                     break;
                 }
                 //case DirectoryRank.Child:
@@ -47,7 +50,8 @@ namespace ISC.ViewModel
                 }
             }
             this.RaisePropertyChanged(nameof(this.Files));
-            this.RaisePropertyChanged(nameof(this.FileListboxItemContextMenu));
+            this.RaisePropertyChanged(nameof(this.FileItemContextMenu));
+            this.RaisePropertyChanged(nameof(this.FileBlankContextMenu));
         }
 
         private void ChangeControlTemplate(LayoutType layoutType)
@@ -98,11 +102,18 @@ namespace ISC.ViewModel
         public RelayCommand Loaded => new RelayCommand(() =>
         {
             this.Files = General.SensorGroups[0].SensorItems;
-            this.FileListboxItemContextMenu = General.FindResource("SensorItem") as ContextMenu;
+            this.FileItemContextMenu = General.FindResource("SensorItem") as ContextMenu;
+            this.FileBlankContextMenu = General.FindResource("SensorBlank") as ContextMenu;
+            this.RaisePropertyChanged(nameof(this.FileBlankContextMenu));
             this.RaisePropertyChanged(nameof(this.Files));
             this.ChangeTemplate(LayoutType.List);
         });
 
         public RelayCommand Open => new RelayCommand((o) => { this.ChangeDataLayout(this.SelectedItem); });
+
+        public RelayCommand ChangeLayout => new RelayCommand((o)=> 
+        {
+            this.ChangeTemplate(General.GetType<LayoutType>(o.ToString()));
+        });
     }
 }

@@ -92,16 +92,6 @@ C:\zhaomin\sourcecode\Others\ISC\ISC\CL\obj\Debug\CL.dll
 C:\zhaomin\sourcecode\Others\ISC\ISC\CL\obj\Debug\CL.pdb
 D:\ISC\ISC\CL\bin\Debug\CL.dll
 D:\ISC\ISC\CL\bin\Debug\CL.pdb
-D:\ISC\ISC\CL\bin\Debug\de\System.Windows.Interactivity.resources.dll
-D:\ISC\ISC\CL\bin\Debug\en\System.Windows.Interactivity.resources.dll
-D:\ISC\ISC\CL\bin\Debug\es\System.Windows.Interactivity.resources.dll
-D:\ISC\ISC\CL\bin\Debug\fr\System.Windows.Interactivity.resources.dll
-D:\ISC\ISC\CL\bin\Debug\it\System.Windows.Interactivity.resources.dll
-D:\ISC\ISC\CL\bin\Debug\ja\System.Windows.Interactivity.resources.dll
-D:\ISC\ISC\CL\bin\Debug\ko\System.Windows.Interactivity.resources.dll
-D:\ISC\ISC\CL\bin\Debug\ru\System.Windows.Interactivity.resources.dll
-D:\ISC\ISC\CL\bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
-D:\ISC\ISC\CL\bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
 D:\ISC\ISC\CL\obj\Debug\CL.csprojResolveAssemblyReference.cache
 D:\ISC\ISC\CL\obj\Debug\DragDrop\ThumbItem.g.cs
 D:\ISC\ISC\CL\obj\Debug\GeneratedInternalTypeHelper.g.cs

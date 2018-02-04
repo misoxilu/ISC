@@ -160,11 +160,38 @@ namespace ISC.Properties {
         }
         
         /// <summary>
+        ///   查找类似 LogOnOffView 的本地化字符串。
+        /// </summary>
+        internal static string LogOnOffView {
+            get {
+                return ResourceManager.GetString("LogOnOffView", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 NetworkPane 的本地化字符串。
         /// </summary>
         internal static string NetworkPane {
             get {
                 return ResourceManager.GetString("NetworkPane", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 ISC.View.Popups 的本地化字符串。
+        /// </summary>
+        internal static string PopupWindowPath {
+            get {
+                return ResourceManager.GetString("PopupWindowPath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 RecordPlaybackOptionsView 的本地化字符串。
+        /// </summary>
+        internal static string RecordPlaybackOptionsView {
+            get {
+                return ResourceManager.GetString("RecordPlaybackOptionsView", resourceCulture);
             }
         }
         

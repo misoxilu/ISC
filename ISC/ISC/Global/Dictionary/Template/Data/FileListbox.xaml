@@ -16,7 +16,7 @@
             <StackPanel.InputBindings>
                 <MouseBinding 
                     Gesture="LeftDoubleClick" 
-                    Command="{Binding DataContext.DoubleClick, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}"/>
+                    Command="{Binding DataContext.Open, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}"/>
             </StackPanel.InputBindings>
         </StackPanel>
     </DataTemplate>
@@ -31,15 +31,15 @@
             <StackPanel.InputBindings>
                 <MouseBinding 
                     Gesture="LeftDoubleClick"
-                    Command="{Binding DataContext.DoubleClick, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}"  />
+                    Command="{Binding DataContext.Open, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}"  />
             </StackPanel.InputBindings>
         </StackPanel>
     </DataTemplate>
 
     <DataTemplate x:Key="FileDataTemplate_List" >
         <StackPanel 
-            Orientation="Horizontal" Background="#03000000" 
-            ContextMenu="{Binding DataContext.FileListboxItemContextMenu,RelativeSource={RelativeSource FindAncestor,AncestorType={x:Type UserControl}}}" 
+            Orientation="Horizontal" Background="#03000000" HorizontalAlignment="Left"
+            ContextMenu="{Binding DataContext.FileItemContextMenu,RelativeSource={RelativeSource FindAncestor,AncestorType={x:Type UserControl}}}" 
             Tag="{Binding DataContext, RelativeSource={RelativeSource AncestorType={x:Type ListBox}}}">
             <Image Width="30" Height="30" Source="{Binding Icon}"/>
             <TextBlock Style="{StaticResource TextBlock}" FontSize="13" Text="{Binding Name}"/>

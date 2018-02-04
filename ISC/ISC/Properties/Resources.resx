@@ -163,4 +163,13 @@
   <data name="StepView" xml:space="preserve">
     <value>StepView</value>
   </data>
+  <data name="LogOnOffView" xml:space="preserve">
+    <value>LogOnOffView</value>
+  </data>
+  <data name="PopupWindowPath" xml:space="preserve">
+    <value>ISC.View.Popups</value>
+  </data>
+  <data name="RecordPlaybackOptionsView" xml:space="preserve">
+    <value>RecordPlaybackOptionsView</value>
+  </data>
 </root>

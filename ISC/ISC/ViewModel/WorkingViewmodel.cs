@@ -34,8 +34,8 @@ namespace ISC.ViewModel
         }
 
 
-        public SsmViewmodel SsmViewmodel { get; private set; } = new SsmViewmodel();
-        public EbmViewmodel EbmViewmodel { get; private set; } = new EbmViewmodel();
+        public SensorstatusMenuViewmodel SsmViewmodel { get; private set; } = new SensorstatusMenuViewmodel();
+        public EasybuilderMenuViewmodel EbmViewmodel { get; private set; } = new EasybuilderMenuViewmodel();
         public DockViewmodel DockViewmodel { get; private set; } = new DockViewmodel();
         public StepsViewmodel StepsViewmodel { get; private set; } = new StepsViewmodel();
         public LocatepartViewmodel LocatepartViewmodel { get; private set; } = new LocatepartViewmodel();
@@ -55,10 +55,10 @@ namespace ISC.ViewModel
 
         private void TestSensorGroup()
         {
-           
-            this.SensorGroups[0].SensorItems.Add(new SensorItem ("SensorA", $"{ Environment.CurrentDirectory }\\Global\\File\\SensorA"));
 
-            this.SensorGroups[0].SensorItems.Add(new SensorItem("SensorB", $"{ Environment.CurrentDirectory }\\Global\\File\\SensorB"));
+            this.SensorGroups[0].SensorItems.Add(new SensorItem("SensorA", $"{ Environment.CurrentDirectory }\\Global\\File\\SensorA") { TypeName = "7400" });
+
+            this.SensorGroups[0].SensorItems.Add(new SensorItem("SensorB", $"{ Environment.CurrentDirectory }\\Global\\File\\SensorB") { TypeName = "7400" });
 
             this.RaisePropertyChanged(nameof(this.SensorGroups));
         }

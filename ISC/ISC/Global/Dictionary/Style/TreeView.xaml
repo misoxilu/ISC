@@ -27,7 +27,7 @@
                         <Setter.Value>
                             <ControlTemplate TargetType="{x:Type TreeViewItem}" >
                                 <Grid>
-                                    <StackPanel Orientation="Vertical" Background="White">
+                                    <StackPanel Orientation="Vertical" Background="White" >
                                         <DockPanel x:Name="Bd" Height="25" LastChildFill="True"  SnapsToDevicePixels="true" >
                                             <Rectangle Width="1" Fill="White"/>
                                             <Border Background="{StaticResource WathetColor}" Width="29">

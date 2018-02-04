@@ -11,7 +11,7 @@
     d:DesignHeight="300" d:DesignWidth="300">
     <UserControl.Resources>
         <Style x:Key="ItemContainerStyle" TargetType="ListBoxItem">
-            <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
         </Style>
     </UserControl.Resources>
 
@@ -20,13 +20,11 @@
             <i:InvokeCommandAction Command="{Binding Loaded}"/>
         </i:EventTrigger>
     </i:Interaction.Triggers>
-    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
-        <ListBox
-            x:Name="Listbox" 
-            ItemsSource="{Binding Files}" SelectedItem="{Binding SelectedItem,Mode=OneWayToSource}"
-            Template="{Binding FileListboxControlTemplate}" 
-            ItemTemplate="{Binding FileListboxDataTemplate}"
-            ItemContainerStyle="{StaticResource ItemContainerStyle }"/>
-    </ScrollViewer>
-
+    <ListBox
+        x:Name="Listbox" 
+        ContextMenu="{Binding DataContext.FileBlankContextMenu, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:FileView}}}" 
+        ItemsSource="{Binding Files}" SelectedItem="{Binding SelectedItem,Mode=OneWayToSource}"
+        Template="{Binding FileListboxControlTemplate}" 
+        ItemTemplate="{Binding FileListboxDataTemplate}"
+        ItemContainerStyle="{StaticResource ItemContainerStyle}"/>
 </UserControl>

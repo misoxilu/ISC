@@ -1,0 +1,79 @@
+﻿<UserControl x:Class="ISC.View.Menus.EasybuilderMenuView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ISC.View"
+             xmlns:vm="clr-namespace:ISC.ViewModel.Menus"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.DataContext>
+        <vm:EasybuilderMenuViewmodel/>
+    </UserControl.DataContext>
+    <UserControl.Resources>
+        <Image x:Key="Open" Source="{StaticResource I_Open}"/>
+    </UserControl.Resources>
+    
+    <Menu DockPanel.Dock="Top" Foreground="{StaticResource BlueColor}" FontSize="16">
+        <MenuItem Header="文件(F)" >
+            <MenuItem Header="新建"/>
+            <MenuItem Header="打开" Icon="{StaticResource  Open}" Command="{Binding OpenFile}" InputGestureText="{StaticResource G_Open}">
+             
+            </MenuItem>
+            <MenuItem Header="保存" />
+            <MenuItem Header="另存为" />
+            <Separator/>
+            <MenuItem Header="打印预览"/>
+            <MenuItem Header="打印"/>
+            <Separator/>
+            <MenuItem Header="退出"/>
+        </MenuItem>
+        <MenuItem Header="编辑(E)">
+            <MenuItem Header="撤销"/>
+            <MenuItem Header="重做"/>
+            <Separator/>
+            <MenuItem Header="剪切" />
+            <MenuItem Header="复制"/>
+            <MenuItem Header="黏贴"/>
+        </MenuItem>
+        <MenuItem Header="查看(V)">
+            <MenuItem Header="网络" Command="{Binding SwitchNetworkPane}"/>
+            <MenuItem Header="文件" Command="{Binding ShowFilePane}"/>
+            <MenuItem Header="选择板" />
+        </MenuItem>
+        <MenuItem Header="图像(V)">
+            <MenuItem Header="触发器(G)"  InputGestureText="F5"/>
+            <MenuItem Header="实况视频(L)" />
+            <Separator/>
+            <MenuItem Header="记录(R)" />
+            <MenuItem Header="回放(P)" >
+                <MenuItem Header="第一张图像(F)" />
+                <MenuItem Header="上一张图像(R)" />
+                <MenuItem Header="播放(P)" />
+                <MenuItem Header="下一张图像(N)" />
+                <MenuItem Header="最后一张图像(L)" />
+            </MenuItem>
+            <MenuItem Header="记录/回放选项(T)" Command="{Binding Popup_RecordPlaybackOptionsView}"/>
+            <Separator/>
+            <MenuItem Header="缩放(Z)" >
+                <MenuItem Header="放大(I)" />
+                <MenuItem Header="缩小(U)" />
+                <MenuItem Header="缩放1:1(O)" />
+                <MenuItem Header="缩放至最大(M)" />
+                <Separator/>
+                <MenuItem Header="缩放至充满(L)" />
+                <MenuItem Header="缩放至适应(F)" />
+            </MenuItem>
+            <MenuItem Header="方向(N)" >
+                <MenuItem Header="普通(N)" />
+                <MenuItem Header="顺时针旋转90°(C)" />
+                <MenuItem Header="旋转180°(R)" />
+                <MenuItem Header="顺时针旋转270°" />
+            </MenuItem>
+            <MenuItem Header="显示亮度反馈" InputGestureText="Ctrl+Shift+B" />
+        </MenuItem>
+        <MenuItem Header="窗口">
+            <MenuItem Header="SensorStatus" Command="{Binding SwitchSensorstatus}"/>
+        </MenuItem>
+    </Menu>
+</UserControl>

@@ -19,13 +19,13 @@
         <TabControl SelectedIndex="{Binding WorkingmodeSelectedIndex}" DockPanel.Dock="Top" >
             <TabItem Height=".1">
                 <StackPanel>
-                    <menu:SsmView DataContext="{Binding SsmViewmodel}"/>
+                    <menu:SensorstatusMenuView DataContext="{Binding SsmViewmodel}"/>
                     <tool:EbtView/>
                 </StackPanel>
             </TabItem>
             <TabItem Height=".1">
                 <StackPanel>
-                    <menu:EbmView/>
+                    <menu:EasybuilderMenuView/>
                     <tool:EbtView/>
                 </StackPanel>
             </TabItem>

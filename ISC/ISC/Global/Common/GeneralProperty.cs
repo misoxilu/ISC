@@ -8,7 +8,7 @@ namespace ISC.Global.Common
     {
         public static WorkingMode WorkingMode { get; set; }
 
-        public static List<SensorGroup> SensorGroups { get; set; } = new List<SensorGroup> { new SensorGroup { SensorItems=new List<Item>()} };
+        public static List<SensorGroup> SensorGroups { get; set; } = new List<SensorGroup> { new SensorGroup {Name="传感器网络", SensorItems=new List<Item>()} };
 
     }
 }

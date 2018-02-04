@@ -112,8 +112,8 @@
     <Compile Include="ViewModel\DockViewmodel.cs" />
     <Compile Include="Global\Common\Enumeration\Number.cs" />
     <Compile Include="ViewModel\FileViewmodel.cs" />
-    <Compile Include="ViewModel\Menus\EbmViewmodel.cs" />
-    <Compile Include="ViewModel\Menus\SsmViewmodel.cs" />
+    <Compile Include="ViewModel\Menus\EasybuilderMenuViewmodel.cs" />
+    <Compile Include="ViewModel\Menus\SensorstatusMenuViewmodel.cs" />
     <Compile Include="ViewModel\NetworkViewmodel.cs" />
     <Compile Include="Global\Common\Interface\IViewSwitch.cs" />
     <Compile Include="ViewModel\MainWindowViewModel.cs" />
@@ -127,8 +127,11 @@
     <Compile Include="View\JobView.xaml.cs">
       <DependentUpon>JobView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Popups\LoginView.xaml.cs">
-      <DependentUpon>LoginView.xaml</DependentUpon>
+    <Compile Include="View\Popups\LogOnOffView.xaml.cs">
+      <DependentUpon>LogOnOffView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Popups\RecordPlaybackOptionsView.xaml.cs">
+      <DependentUpon>RecordPlaybackOptionsView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Selections\EbSelectionView.xaml.cs">
       <DependentUpon>EbSelectionView.xaml</DependentUpon>
@@ -142,11 +145,11 @@
     <Compile Include="View\FileView.xaml.cs">
       <DependentUpon>FileView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Menus\EbmView.xaml.cs">
-      <DependentUpon>EbmView.xaml</DependentUpon>
+    <Compile Include="View\Menus\EasybuilderMenuView.xaml.cs">
+      <DependentUpon>EasybuilderMenuView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Menus\SsmView.xaml.cs">
-      <DependentUpon>SsmView.xaml</DependentUpon>
+    <Compile Include="View\Menus\SensorstatusMenuView.xaml.cs">
+      <DependentUpon>SensorstatusMenuView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\NetworkView.xaml.cs">
       <DependentUpon>NetworkView.xaml</DependentUpon>
@@ -166,7 +169,11 @@
     <Compile Include="View\WorkingView.xaml.cs">
       <DependentUpon>WorkingView.xaml</DependentUpon>
     </Compile>
-    <Page Include="Global\Dictionary\Control\Menu.xaml">
+    <Page Include="Global\Dictionary\Control\FileContextMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Global\Dictionary\Control\NetworkContextMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -246,7 +253,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Popups\LoginView.xaml">
+    <Page Include="View\Popups\LogOnOffView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Popups\RecordPlaybackOptionsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -266,11 +277,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Menus\EbmView.xaml">
+    <Page Include="View\Menus\EasybuilderMenuView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Menus\SsmView.xaml">
+    <Page Include="View\Menus\SensorstatusMenuView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

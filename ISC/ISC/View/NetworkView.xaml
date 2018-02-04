@@ -2,20 +2,19 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:vm="clr-namespace:ISC.ViewModel"
-             xmlns:local="clr-namespace:ISC.View"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <UserControl.Resources>
+        
         <HierarchicalDataTemplate x:Key="TreeViewItem"  ItemsSource="{Binding SensorItems}">
-            <DockPanel LastChildFill="True" VerticalAlignment="Center" Margin="5,0,0,0" >
+            <DockPanel LastChildFill="True" VerticalAlignment="Center" Margin="5,0,0,0" ContextMenu="{StaticResource NetworkGroup}">
                 <Image Height="30" Source="{StaticResource I_Network}"/>
                 <TextBlock Margin="5,0,0,0" DockPanel.Dock="Left" VerticalAlignment="Center" Style="{StaticResource TextBlock}" Text="{Binding Name}"  />
             </DockPanel>
             <HierarchicalDataTemplate.ItemTemplate >
                 <DataTemplate >
-                    <DockPanel LastChildFill="True" VerticalAlignment="Center" Margin="10,0,0,0" >
+                    <DockPanel LastChildFill="True" VerticalAlignment="Center" Margin="10,0,0,0" ContextMenu="{StaticResource NetworkSensor}">
                         <Image Height="30" Source="{StaticResource I_Network2}"/>
                         <TextBlock DockPanel.Dock="Left" Style="{StaticResource TextBlock}" VerticalAlignment="Center" Text="{Binding Name}" Margin="5,0,0,0"/>
                     </DockPanel>
@@ -24,6 +23,8 @@
         </HierarchicalDataTemplate>
     </UserControl.Resources>
     <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
-        <TreeView ItemsSource="{Binding SensorGroups}" ItemTemplate="{StaticResource TreeViewItem}" />
+        <TreeView ContextMenu="{StaticResource NetworkGroup}"
+            ItemsSource="{Binding SensorGroups}" 
+            ItemTemplate="{StaticResource TreeViewItem}"/>
     </ScrollViewer>
 </UserControl>

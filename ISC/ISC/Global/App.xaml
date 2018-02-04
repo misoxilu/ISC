@@ -22,7 +22,8 @@
                 <ResourceDictionary Source="/Global/Dictionary/Icon.xaml"/>
                 <ResourceDictionary Source="/Global/Dictionary/Template/Control/FileListbox.xaml"/>
                 <ResourceDictionary Source="/Global/Dictionary/Template/Data/FileListbox.xaml"/>
-                <ResourceDictionary Source="/Global/Dictionary/Control/Menu.xaml"/>
+                <ResourceDictionary Source="/Global/Dictionary/Control/FileContextMenu.xaml"/>
+                <ResourceDictionary Source="/Global/Dictionary/Control/NetworkContextMenu.xaml"/>
             </ResourceDictionary.MergedDictionaries>
            
             
