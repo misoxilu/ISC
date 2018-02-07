@@ -1,23 +1,25 @@
-﻿<UserControl x:Class="ISC.View.Menus.EasybuilderMenuView"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:ISC.View"
-             xmlns:vm="clr-namespace:ISC.ViewModel.Menus"
-             mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+﻿<UserControl 
+    x:Class="ISC.View.Menus.EasybuilderMenuView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:ef="http://schemas.microsoft.com/expression/2010/effects" 
+    xmlns:vm="clr-namespace:ISC.ViewModel.Menus"
+    mc:Ignorable="d" 
+    d:DesignHeight="300" d:DesignWidth="300">
     <UserControl.DataContext>
         <vm:EasybuilderMenuViewmodel/>
     </UserControl.DataContext>
     <UserControl.Resources>
-        <Image x:Key="Open" Source="{StaticResource I_Open}"/>
+        <Image x:Key="Open" Source="{StaticResource I_Open}" Effect="{Binding OpenEffect}"/>
+
     </UserControl.Resources>
     
     <Menu DockPanel.Dock="Top" Foreground="{StaticResource BlueColor}" FontSize="16">
         <MenuItem Header="文件(F)" >
             <MenuItem Header="新建"/>
-            <MenuItem Header="打开" Icon="{StaticResource  Open}" Command="{Binding OpenFile}" InputGestureText="{StaticResource G_Open}">
+            <MenuItem Header="打开" Icon="{StaticResource  Open}" Command="{Binding OpenFile}" InputGestureText="{StaticResource G_Open}" >
              
             </MenuItem>
             <MenuItem Header="保存" />
