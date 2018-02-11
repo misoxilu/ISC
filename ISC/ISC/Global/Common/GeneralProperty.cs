@@ -1,13 +1,24 @@
 ﻿using ISC.Global.Common.Enumeration;
-using ISC.Model.Working;
+using ISC.Model.Entity.Working.Initializations;
+using ISC.Model.Entity.Working;
+using System;
 using System.Collections.Generic;
+using System.Windows;
 using System.Windows.Media.Effects;
 
 namespace ISC.Global.Common
 {
     public static partial class General
     {
-        public static Effect GrayEffect { get; set; } = General.FindResource("GrayEffect") as Effect;
+        private static string initializationFilePath = $"{Environment.CurrentDirectory}{Properties.Resources.InitializationFilePath}";
+
+        private static ResourceDictionary currentLanguageResource;
+
+        private static Window UserControl { get; set; }
+
+        public static Initialization Initialization { get; set; }
+
+        public static Effect GrayEffect { get; set; } = General.FindResource<Effect>(Properties.Resources.GrayEffect);
 
         public static WorkingMode WorkingMode { get; set; }
 

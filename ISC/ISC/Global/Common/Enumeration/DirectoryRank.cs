@@ -8,7 +8,8 @@ namespace ISC.Global.Common.Enumeration
 {
     public enum DirectoryRank
     {
-        Root = 0,
-        Child = 1
+        Group=0,
+        Sensor = 1,
+        File = 2
     }
 }

@@ -135,8 +135,8 @@
   <data name="FileDataTemplate_Tile" xml:space="preserve">
     <value>FileDataTemplate_Tile</value>
   </data>
-  <data name="FilePane" xml:space="preserve">
-    <value>FilePane</value>
+  <data name="FileView" xml:space="preserve">
+    <value>FileView</value>
   </data>
   <data name="FilePath" xml:space="preserve">
     <value>{0}\\Global\\File</value>
@@ -150,11 +150,11 @@
   <data name="LanguageFilePath" xml:space="preserve">
     <value>/ISC;component/Global/Dictionary/Language/{0}.xaml</value>
   </data>
-  <data name="NetworkPane" xml:space="preserve">
-    <value>NetworkPane</value>
+  <data name="NetworkView" xml:space="preserve">
+    <value>NetworkView</value>
   </data>
-  <data name="SelectionPane" xml:space="preserve">
-    <value>SelectionPane</value>
+  <data name="SelectionView" xml:space="preserve">
+    <value>SelectionView</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="SplashScreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
@@ -171,5 +171,17 @@
   </data>
   <data name="RecordPlaybackOptionsView" xml:space="preserve">
     <value>RecordPlaybackOptionsView</value>
+  </data>
+  <data name="InitializationFilePath" xml:space="preserve">
+    <value>\Global\Dictionary\Initialization.json</value>
+  </data>
+  <data name="GrayEffect" xml:space="preserve">
+    <value>GrayEffect</value>
+  </data>
+  <data name="I_NetworkChild" xml:space="preserve">
+    <value>I_NetworkChild</value>
+  </data>
+  <data name="I_NetworkRoot" xml:space="preserve">
+    <value>I_NetworkRoot</value>
   </data>
 </root>

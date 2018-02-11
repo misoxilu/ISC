@@ -40,7 +40,7 @@
         </MenuItem>
         <MenuItem Header="查看(V)">
             <MenuItem Header="网络" Command="{Binding SwitchNetworkPane}"/>
-            <MenuItem Header="文件" Command="{Binding ShowFilePane}"/>
+            <MenuItem Header="文件" Command="{Binding SwitchFilePane}"/>
             <MenuItem Header="选择板" />
         </MenuItem>
         <MenuItem Header="图像(V)">

@@ -1,6 +1,6 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <ContextMenu x:Key="NetworkGroup" >
+    <ContextMenu x:Key="Group" >
         <MenuItem Header="添加传感器/设备"  />
         <MenuItem Header="浏览器主机表"/>
         <MenuItem Header="远程子网"/>
@@ -8,7 +8,7 @@
         <MenuItem Header="刷新" />
     </ContextMenu>
 
-    <ContextMenu x:Key="NetworkSensor" >
+    <ContextMenu x:Key="Sensor" >
         <MenuItem Header="显示EasyBuilder视图"  />
         <MenuItem Header="显示传感器状态视图"  />
         <Separator/>

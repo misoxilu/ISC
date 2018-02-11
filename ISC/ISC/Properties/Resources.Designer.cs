@@ -115,20 +115,47 @@ namespace ISC.Properties {
         }
         
         /// <summary>
-        ///   查找类似 FilePane 的本地化字符串。
-        /// </summary>
-        internal static string FilePane {
-            get {
-                return ResourceManager.GetString("FilePane", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   查找类似 {0}\\Global\\File 的本地化字符串。
         /// </summary>
         internal static string FilePath {
             get {
                 return ResourceManager.GetString("FilePath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 FileView 的本地化字符串。
+        /// </summary>
+        internal static string FileView {
+            get {
+                return ResourceManager.GetString("FileView", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 GrayEffect 的本地化字符串。
+        /// </summary>
+        internal static string GrayEffect {
+            get {
+                return ResourceManager.GetString("GrayEffect", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 I_NetworkChild 的本地化字符串。
+        /// </summary>
+        internal static string I_NetworkChild {
+            get {
+                return ResourceManager.GetString("I_NetworkChild", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 I_NetworkRoot 的本地化字符串。
+        /// </summary>
+        internal static string I_NetworkRoot {
+            get {
+                return ResourceManager.GetString("I_NetworkRoot", resourceCulture);
             }
         }
         
@@ -151,6 +178,15 @@ namespace ISC.Properties {
         }
         
         /// <summary>
+        ///   查找类似 \Global\Dictionary\Initialization.json 的本地化字符串。
+        /// </summary>
+        internal static string InitializationFilePath {
+            get {
+                return ResourceManager.GetString("InitializationFilePath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 /ISC;component/Global/Dictionary/Language/{0}.xaml 的本地化字符串。
         /// </summary>
         internal static string LanguageFilePath {
@@ -169,11 +205,11 @@ namespace ISC.Properties {
         }
         
         /// <summary>
-        ///   查找类似 NetworkPane 的本地化字符串。
+        ///   查找类似 NetworkView 的本地化字符串。
         /// </summary>
-        internal static string NetworkPane {
+        internal static string NetworkView {
             get {
-                return ResourceManager.GetString("NetworkPane", resourceCulture);
+                return ResourceManager.GetString("NetworkView", resourceCulture);
             }
         }
         
@@ -196,11 +232,11 @@ namespace ISC.Properties {
         }
         
         /// <summary>
-        ///   查找类似 SelectionPane 的本地化字符串。
+        ///   查找类似 SelectionView 的本地化字符串。
         /// </summary>
-        internal static string SelectionPane {
+        internal static string SelectionView {
             get {
-                return ResourceManager.GetString("SelectionPane", resourceCulture);
+                return ResourceManager.GetString("SelectionView", resourceCulture);
             }
         }
         

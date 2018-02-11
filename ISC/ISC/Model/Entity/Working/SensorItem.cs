@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Media.Imaging;
 
-namespace ISC.Model.Working
+namespace ISC.Model.Entity.Working
 {
     public class SensorItem : File
     {
@@ -29,7 +29,7 @@ namespace ISC.Model.Working
 
             foreach (var item in files) this.Files.Add(new File(item));
 
-            this.Rank = DirectoryRank.Root;
+            this.Rank = DirectoryRank.Sensor;
         }
     }
 }

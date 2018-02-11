@@ -8,6 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("global/dictionary/initialization.json")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("global/resource/dll/livecharts.dll")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("global/resource/dll/livecharts.wpf.dll")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("global/resource/dll/microsoft.expression.effects.dll")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("global/resource/dll/microsoft.expression.interactions.dll")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("global/resource/dll/system.windows.interactivity.dll")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("global/resource/dll/xceed.wpf.avalondock.dll")]
@@ -22,8 +26,8 @@
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("global/resource/icons/document.ico")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("global/resource/icons/file.ico")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("global/resource/icons/image.ico")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("global/resource/icons/network.ico")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("global/resource/icons/network2.ico")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("global/resource/icons/networkroot.ico")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("global/resource/icons/networkchild.ico")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("global/resource/icons/new.ico")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("global/resource/icons/open.ico")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("global/resource/icons/open_dis.ico")]

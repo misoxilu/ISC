@@ -1,5 +1,5 @@
 ﻿using ISC.Global.Common.Interface;
-using ISC.Model.Base;
+using ISC.Model.Entity.Base;
 using System;
 using System.ComponentModel;
 using System.Windows;

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ISC.Model.Base
+namespace ISC.Model.Entity.Base
 {
     public abstract class Notify: INotifyPropertyChanged
     {

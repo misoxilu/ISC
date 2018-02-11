@@ -16,7 +16,7 @@
             <dock:LayoutPanel Orientation="Horizontal">
                 <dock:LayoutAnchorablePaneGroup Orientation="Horizontal" DockWidth="1*" DockHeight="*">
                     <dock:LayoutAnchorablePane >
-                        <dock:LayoutAnchorable  x:Name="FilePane" CanAutoHide="False" CanFloat="False" CanHide="True">
+                        <dock:LayoutAnchorable  x:Name="FileView" CanAutoHide="False" CanFloat="False" CanHide="True">
                             <local:FileView DataContext="{Binding FileViewmodel}"/>
                         </dock:LayoutAnchorable>
                     </dock:LayoutAnchorablePane>
@@ -24,7 +24,7 @@
 
                 <dock:LayoutAnchorablePaneGroup Orientation="Horizontal" DockWidth="1*" DockHeight="*">
                     <dock:LayoutAnchorablePane >
-                        <dock:LayoutAnchorable x:Name="NetworkPane" CanAutoHide="False" CanFloat="False"  CanHide="True">
+                        <dock:LayoutAnchorable x:Name="NetworkView" CanAutoHide="False" CanFloat="False"  CanHide="True">
                             <local:NetworkView DataContext="{Binding NetworkViewmodel}"/>
                         </dock:LayoutAnchorable>
                     </dock:LayoutAnchorablePane>
@@ -49,7 +49,7 @@
 
                 <dock:LayoutAnchorablePaneGroup Orientation="Horizontal" DockWidth="2*" DockHeight="*">
                     <dock:LayoutAnchorablePane  >
-                        <dock:LayoutAnchorable x:Name="SelectionPane" Title="选择板">
+                        <dock:LayoutAnchorable x:Name="SelectionView" Title="选择板">
                             <TabControl>
                                 <TabItem Width="0" Header=".1">
                                     <pane:EbSelectionView/>

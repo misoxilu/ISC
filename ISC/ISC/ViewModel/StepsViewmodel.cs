@@ -11,7 +11,7 @@ namespace ISC.ViewModel
 {
     public class StepsViewmodel:Base.ViewModel
     {
-        public RelayCommand GetConnected => new RelayCommand(()=> 
+        public RelayCommand GetConnected => new RelayCommand(() =>
         {
             General.RaiseEventHandler(this, EventName.GetConnected, null);
         });

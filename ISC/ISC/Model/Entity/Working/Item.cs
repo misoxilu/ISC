@@ -1,14 +1,11 @@
 ﻿using ISC.Global.Common.Enumeration;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using ISC.Model.Entity.Base;
+using System.Windows;
 using System.Windows.Media.Imaging;
 
-namespace ISC.Model.Working
+namespace ISC.Model.Entity.Working
 {
-    public abstract class Item : Base.Notify
+    public abstract class Item : Notify
     {
         public string Name { get; set; }
 
@@ -19,6 +16,8 @@ namespace ISC.Model.Working
             this.Name = name;
             this.Icon = Icon;
         }
+
+        public Visibility State { get; set; }
 
         public DirectoryRank Rank { get; set; }
 

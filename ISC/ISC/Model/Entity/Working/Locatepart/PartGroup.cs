@@ -1,12 +1,8 @@
-﻿using ISC.Model.Base;
-using System;
+﻿using ISC.Model.Entity.WorkingLocatepart;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Media.Imaging;
 
-namespace ISC.Model.Locatepart
+namespace ISC.Model.Entity.Working.Locatepart
 {
     public class PartGroup 
     {

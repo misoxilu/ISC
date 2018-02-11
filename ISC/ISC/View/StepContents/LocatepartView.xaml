@@ -4,7 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-    xmlns:local="clr-namespace:ISC.View.StepContents"
+    xmlns:LiveCharts="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
     mc:Ignorable="d" 
     d:DesignHeight="300" d:DesignWidth="600">
     <UserControl.Resources>
@@ -13,14 +13,18 @@
         </ContextMenu>
         <HierarchicalDataTemplate x:Key="TreeViewItem"  ItemsSource="{Binding PartItems}">
             <DockPanel LastChildFill="True" VerticalAlignment="Center" Margin="5,0,0,0" >
-                <Image Height="30" Source="{StaticResource I_Network2 }"/>
+                <Image Height="30" Source="{StaticResource I_NetworkChild }"/>
                 <TextBlock Margin="5,0,0,0" DockPanel.Dock="Left" VerticalAlignment="Center" Style="{StaticResource TextBlock}" Text="{Binding Name}"  />
             </DockPanel>
             <HierarchicalDataTemplate.ItemTemplate >
                 <DataTemplate >
                     <DockPanel LastChildFill="True" VerticalAlignment="Center" Margin="10,0,0,0" ContextMenu="{StaticResource ContextMenu}">
-                        <Image Height="30" Source="{Binding Image}"/>
+                        <Image Height="30" Source="{Binding Icon}"/>
                         <TextBlock DockPanel.Dock="Left" Style="{StaticResource TextBlock}" VerticalAlignment="Center" Text="{Binding Name}" Margin="5,0,0,0"/>
+                        <DockPanel.InputBindings>
+                            <MouseBinding Gesture="LeftClick" Command="{Binding DataContext.LeftClick, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}" CommandParameter="{Binding}"/>
+                            <MouseBinding Gesture="LeftDoubleClick" Command="{Binding DataContext.LeftDoubleClick, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}" CommandParameter="{Binding}"/>
+                        </DockPanel.InputBindings>
                     </DockPanel>
                 </DataTemplate>
             </HierarchicalDataTemplate.ItemTemplate>
@@ -38,13 +42,44 @@
                     <TreeView ItemsSource="{Binding PartGroups}" ItemTemplate="{StaticResource TreeViewItem}"/>
                 </DockPanel>
             </GroupBox>
-            <TabControl BorderThickness="0" Margin="5,0,0,0" DockPanel.Dock="Right">
+            <TabControl SelectedIndex="{Binding FlowIndex}" BorderThickness="0" Margin="5,0,0,0" DockPanel.Dock="Right">
                 <TabItem Height=".1">
                     <GroupBox HorizontalAlignment="Left" Header="Discription" Width="300">
                         
                     </GroupBox>
                 </TabItem>
-                <TabItem Height=".1"> 
+                <TabItem Height=".1">
+                    <GroupBox HorizontalAlignment="Left" Header="方向" Width="300">
+
+                    </GroupBox>
+                </TabItem>
+                <TabItem Height=".1">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="50*"/>
+                            <ColumnDefinition Width="3"/>
+                            <ColumnDefinition Width="50*"/>
+                        </Grid.ColumnDefinitions>
+                        <TabControl Grid.Column="0">
+                            <TabItem Height="20" Width="50" Header="常规">
+                                <Grid>
+                                    
+                                </Grid>
+                            </TabItem>
+                            <TabItem Height="20" Width="50" Header="设置"/>
+                        </TabControl>
+
+                        <GridSplitter Grid.Column="1" Width="3" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
+
+                        <LiveCharts:CartesianChart Grid.Column="2" Series="{Binding SeriesCollection}" LegendLocation="Bottom">
+                            <LiveCharts:CartesianChart.AxisX>
+                                <LiveCharts:Axis Title="时间" FontWeight="Bold" LabelFormatter="{Binding XFormatter}"/>
+                            </LiveCharts:CartesianChart.AxisX>
+                            <LiveCharts:CartesianChart.AxisY>
+                                <LiveCharts:Axis Title="荧光" FontWeight="Bold" />
+                            </LiveCharts:CartesianChart.AxisY>
+                        </LiveCharts:CartesianChart>
+                    </Grid>
                     
                 </TabItem>
             </TabControl>

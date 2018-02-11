@@ -30,7 +30,8 @@ namespace ISC.ViewModel
 
         public void HideSelectionPane()
         {
-            General.SwitchPane(Properties.Resources.SelectionPane, PaneState.Hide);
+            //General.SwitchPane(Properties.Resources.SelectionPane, PaneState.Hide);
+
         }
 
         public DockViewmodel()

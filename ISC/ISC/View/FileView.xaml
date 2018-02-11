@@ -7,7 +7,6 @@
     xmlns:local="clr-namespace:ISC.View" 
     x:Class="ISC.View.FileView" 
     mc:Ignorable="d"
-    xmlns:vm="clr-namespace:ISC.ViewModel"
     d:DesignHeight="300" d:DesignWidth="300">
     <UserControl.Resources>
         <Style x:Key="ItemContainerStyle" TargetType="ListBoxItem">
@@ -21,9 +20,10 @@
         </i:EventTrigger>
     </i:Interaction.Triggers>
     <ListBox
-        x:Name="Listbox" 
+        x:Name="Listbox" IsHitTestVisible="True"
         ContextMenu="{Binding DataContext.FileBlankContextMenu, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:FileView}}}" 
-        ItemsSource="{Binding Files}" SelectedItem="{Binding SelectedItem,Mode=OneWayToSource}"
+        ItemsSource="{Binding Files}" 
+        SelectedItem="{Binding SelectedItem,Mode=OneWayToSource}"
         Template="{Binding FileListboxControlTemplate}" 
         ItemTemplate="{Binding FileListboxDataTemplate}"
         ItemContainerStyle="{StaticResource ItemContainerStyle}"/>

@@ -34,7 +34,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.Expression.Effects, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Global\Resource\Dll\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Global\Resource\Dll\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Effects, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Microsoft.Expression.Interactions, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>Global\Dll\Microsoft.Expression.Interactions.dll</HintPath>
@@ -44,6 +54,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>Global\Dll\System.Windows.Interactivity.dll</HintPath>
@@ -101,12 +113,16 @@
     <Compile Include="Global\Common\Enumeration\WorkingMode.cs" />
     <Compile Include="Global\Common\EventHandlerArgs.cs" />
     <Compile Include="Global\Common\GeneralProperty.cs" />
-    <Compile Include="Model\Working\File.cs" />
-    <Compile Include="Model\Locatepart\PartGroup.cs" />
-    <Compile Include="Model\Locatepart\PartItem.cs" />
-    <Compile Include="Model\Working\Item.cs" />
-    <Compile Include="Model\Working\SensorGroup.cs" />
-    <Compile Include="Model\Working\SensorItem.cs" />
+    <Compile Include="Model\Entity\Working\File.cs" />
+    <Compile Include="Model\Entity\Working\Locatepart\PartGroup.cs" />
+    <Compile Include="Model\Entity\Working\Locatepart\PartItem.cs" />
+    <Compile Include="Model\Entity\Working\Initializations\Initialization.cs" />
+    <Compile Include="Model\Entity\Working\Initializations\PlaybackOptions.cs" />
+    <Compile Include="Model\Entity\Working\Initializations\RecordOptions.cs" />
+    <Compile Include="Model\Entity\Working\Initializations\RecordPlaybackOptions.cs" />
+    <Compile Include="Model\Entity\Working\Item.cs" />
+    <Compile Include="Model\Entity\Working\SensorGroup.cs" />
+    <Compile Include="Model\Entity\Working\SensorItem.cs" />
     <Compile Include="ViewModel\Base\RelayCommand.cs" />
     <Compile Include="ViewModel\Base\ViewModel.cs" />
     <Compile Include="Global\Common\Converter\Count2IsChecked.cs" />
@@ -119,6 +135,7 @@
     <Compile Include="Global\Common\Interface\IViewSwitch.cs" />
     <Compile Include="ViewModel\MainWindowViewModel.cs" />
     <Compile Include="ViewModel\Base\Behavior.cs" />
+    <Compile Include="ViewModel\Popups\RecordPlaybackOptionsViewmodel.cs" />
     <Compile Include="ViewModel\StepContents\LocatepartViewmodel.cs" />
     <Compile Include="ViewModel\StepsViewmodel.cs" />
     <Compile Include="ViewModel\WorkingViewmodel.cs" />
@@ -303,7 +320,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Global\Common\General.cs" />
-    <Compile Include="Model\Base\Notfiy.cs" />
+    <Compile Include="Model\Entity\Base\Notfiy.cs" />
     <Compile Include="View\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -348,6 +365,9 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <Content Include="Global\Dictionary\Initialization.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -363,6 +383,15 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Global\Resource\Dll\LiveCharts.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Global\Resource\Dll\LiveCharts.Wpf.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Global\Resource\Dll\Microsoft.Expression.Effects.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Global\Resource\Dll\Microsoft.Expression.Interactions.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -405,10 +434,10 @@
     <Content Include="Global\Resource\Icons\Image.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Global\Resource\Icons\Network.ico">
+    <Content Include="Global\Resource\Icons\NetworkRoot.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Global\Resource\Icons\Network2.ico">
+    <Content Include="Global\Resource\Icons\NetworkChild.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Global\Resource\Icons\New.ico">
@@ -449,8 +478,7 @@
     </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Model\Network\" />
-    <Folder Include="ViewModel\Popups\" />
+    <Folder Include="Model\Entity\Working\Network\" />
     <Folder Include="ViewModel\Selections\" />
     <Folder Include="View\Works\" />
   </ItemGroup>

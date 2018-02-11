@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using ISC.Model.Working;
+using ISC.Model.Entity.Working;
 using ISC.ViewModel.Base;
 using ISC.Global.Common;
 using System.Windows.Controls;
@@ -30,11 +30,11 @@ namespace ISC.ViewModel
         {
             switch (item.Rank)
             {
-                case DirectoryRank.Root:
+                case DirectoryRank.Sensor:
                 {
-                    this.Files = ((SensorItem)item).Files;// General.SensorGroups[0].SensorItems;
-                    this.FileItemContextMenu = General.FindResource("FileItem") as ContextMenu;
-                    this.FileBlankContextMenu = General.FindResource("FileBlank") as ContextMenu;
+                    this.Files = ((SensorItem)item).Files;
+                    this.FileItemContextMenu = General.FindResource<ContextMenu>("FileItem");
+                    this.FileBlankContextMenu = General.FindResource<ContextMenu>("FileBlank");
                     break;
                 }
                 //case DirectoryRank.Child:
@@ -59,8 +59,8 @@ namespace ISC.ViewModel
             switch (layoutType)
             {
                 case LayoutType.Thumbnail:
-                case LayoutType.Tile: { this.FileListboxControlTemplate = General.FindResource(Properties.Resources.FileControlTemplate_Tile) as ControlTemplate; break; }
-                default: { this.FileListboxControlTemplate = General.FindResource(Properties.Resources.FileControlTemplate_List) as ControlTemplate; break; }
+                case LayoutType.Tile: { this.FileListboxControlTemplate = General.FindResource<ControlTemplate>(Properties.Resources.FileControlTemplate_Tile); break; }
+                default: { this.FileListboxControlTemplate = General.FindResource<ControlTemplate>(Properties.Resources.FileControlTemplate_List); break; }
             }
             this.RaisePropertyChanged(nameof(this.FileListboxControlTemplate));
         }
@@ -71,17 +71,17 @@ namespace ISC.ViewModel
             {
                 case LayoutType.Thumbnail:
                 {
-                    this.FileListboxDataTemplate = General.FindResource(Properties.Resources.FileDataTemplate_Thumbnail) as DataTemplate;
+                    this.FileListboxDataTemplate = General.FindResource<DataTemplate>(Properties.Resources.FileDataTemplate_Thumbnail);
                     break;
                 }
                 case LayoutType.Tile:
                 {
-                    this.FileListboxDataTemplate = General.FindResource(Properties.Resources.FileDataTemplate_Tile) as DataTemplate;
+                    this.FileListboxDataTemplate = General.FindResource<DataTemplate>(Properties.Resources.FileDataTemplate_Tile);
                     break;
                 }
                 case LayoutType.List:
                 {
-                    this.FileListboxDataTemplate = General.FindResource(Properties.Resources.FileDataTemplate_List) as DataTemplate;
+                    this.FileListboxDataTemplate = General.FindResource<DataTemplate>(Properties.Resources.FileDataTemplate_List);
                     break;
                 }
                 default:
@@ -102,18 +102,15 @@ namespace ISC.ViewModel
         public RelayCommand Loaded => new RelayCommand(() =>
         {
             this.Files = General.SensorGroups[0].SensorItems;
-            this.FileItemContextMenu = General.FindResource("SensorItem") as ContextMenu;
-            this.FileBlankContextMenu = General.FindResource("SensorBlank") as ContextMenu;
+            this.FileItemContextMenu = General.FindResource<ContextMenu>("SensorItem");
+            this.FileBlankContextMenu = General.FindResource<ContextMenu>("SensorBlank");
             this.RaisePropertyChanged(nameof(this.FileBlankContextMenu));
             this.RaisePropertyChanged(nameof(this.Files));
             this.ChangeTemplate(LayoutType.List);
         });
 
-        public RelayCommand Open => new RelayCommand((o) => { this.ChangeDataLayout(this.SelectedItem); });
+        public RelayCommand Open => new RelayCommand(() => { this.ChangeDataLayout(this.SelectedItem); });
 
-        public RelayCommand ChangeLayout => new RelayCommand((o)=> 
-        {
-            this.ChangeTemplate(General.GetType<LayoutType>(o.ToString()));
-        });
+        public RelayCommand ChangeLayout => new RelayCommand((o) => this.ChangeTemplate(General.GetEnumItem<LayoutType>(o.ToString())));
     }
 }

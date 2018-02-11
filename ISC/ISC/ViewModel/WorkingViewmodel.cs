@@ -1,6 +1,6 @@
 ﻿using ISC.Global.Common;
 using ISC.Global.Common.Enumeration;
-using ISC.Model.Working;
+using ISC.Model.Entity.Working;
 using ISC.ViewModel.Base;
 using ISC.ViewModel.Menus;
 using ISC.ViewModel.StepContents;
@@ -42,7 +42,8 @@ namespace ISC.ViewModel
 
         public RelayCommand Loaded => new RelayCommand(() =>
         {
-            this.grid = General.FindGrid();
+            General.ReadInitialization();
+            this.grid = General.FindWorkingViewControl("Grid") as Grid;
             this.SwitchSensorstatus();
         });
 
@@ -71,11 +72,10 @@ namespace ISC.ViewModel
                 {
                     case EventName.SwitchEasybuilder: { this.SwitchWorkingView(WorkingMode.Easybuilder); break; }
                     case EventName.SwitchSensorstatus: { this.SwitchWorkingView(WorkingMode.Sensorstatus); break; }
-                    case EventName.GetConnected:
-                    {
-                        this.StepsIndex = 2;
-                        break;
-                    }
+                    case EventName.GetConnected: { this.StepsIndex = 2; break; }
+                    case EventName.PopupWindow: { General.PopupView(e.Value.ToString()); break; }
+                    case EventName.CloseWindow: { General.CloseView(); break; }
+                    default: break;
                 }
             };
         }
@@ -101,7 +101,8 @@ namespace ISC.ViewModel
             this.grid.RowDefinitions[2].Height = new GridLength(0, GridUnitType.Pixel);
             this.SecondRowVisibility = Visibility.Hidden;
             this.RaisePropertiesChanged();
-            General.SwitchPane(Properties.Resources.SelectionPane, PaneState.Hide);
+            General.FindPane(Properties.Resources.SelectionView).Hide();
+            General.FindPane("StepView").Hide();
         }
 
         private void SwitchEasybuilder()
@@ -110,12 +111,11 @@ namespace ISC.ViewModel
             this.DockViewmodel.WorkingmodeSelectedIndex = 1;
             this.grid.RowDefinitions[0].Height = new GridLength(0, GridUnitType.Auto);
             this.grid.RowDefinitions[1].Height = new GridLength(3, GridUnitType.Pixel);
-            this.grid.RowDefinitions[2].Height = new GridLength(200, GridUnitType.Pixel);
+            this.grid.RowDefinitions[2].Height = new GridLength(200, GridUnitType.Star);
             this.SecondRowVisibility = Visibility.Visible;
-
-
             this.RaisePropertiesChanged();
-            General.SwitchPane(Properties.Resources.SelectionPane, PaneState.Show);
+            General.FindPane(Properties.Resources.SelectionView).Show();
+            General.FindPane("StepView").Show();
         }
 
         private void RaisePropertiesChanged()

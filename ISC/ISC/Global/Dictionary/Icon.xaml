@@ -3,8 +3,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
 
-    <BitmapImage x:Key="I_Network" UriSource="/ISC;component/Global/Resource/Icons/Network.ico" />
-    <BitmapImage x:Key="I_Network2" UriSource="/ISC;component/Global/Resource/Icons/Network2.ico" />
+    <BitmapImage x:Key="I_NetworkRoot" UriSource="/ISC;component/Global/Resource/Icons/NetworkRoot.ico" />
+    <BitmapImage x:Key="I_NetworkChild" UriSource="/ISC;component/Global/Resource/Icons/NetworkChild.ico" />
     <BitmapImage x:Key="I_Open" UriSource="/ISC;component/Global/Resource/Icons/Open.ico" />
     <BitmapImage x:Key="I_Cut" UriSource="/ISC;component/Global/Resource/Icons/Cut.ico" />
     <BitmapImage x:Key="I_Save" UriSource="/ISC;component/Global/Resource/Icons/Save.ico" />
@@ -20,6 +20,7 @@
     <BitmapImage x:Key="I_Edge" UriSource="/ISC;component/Global/Resource/Icons/File.ico" />
     <BitmapImage x:Key="I_Point" UriSource="/ISC;component/Global/Resource/Icons/Cut.ico" />
     <BitmapImage x:Key="I_Blob" UriSource="/ISC;component/Global/Resource/Icons/Delete.ico" />
-    
+    <BitmapImage x:Key="I_Image" UriSource="/ISC;component/Global/Resource/Icons/Image.ico" />
+    <BitmapImage x:Key="I_Document" UriSource="/ISC;component/Global/Resource/Icons/Document.ico"/>
     <!--<Image x:Key="Open" Source="Open.ico"/>-->
 </ResourceDictionary>

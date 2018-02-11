@@ -37,14 +37,14 @@
         </TabControl>
         <Grid x:Name="Grid">
             <Grid.RowDefinitions>
-                <RowDefinition MinHeight="200" Height="{Binding FirstRowHeight}" />
+                <RowDefinition MinHeight="200" />
                 <RowDefinition />
                 <RowDefinition />
             </Grid.RowDefinitions>
             
             <local:DockView x:Name="DockView" Grid.Row="0" DataContext="{Binding DockViewmodel}"/>
             <GridSplitter Visibility="{Binding SecondRowVisibility}" Grid.Row="1" Background="{StaticResource GreenColor}" Height="3" VerticalAlignment="Center" HorizontalAlignment="Stretch"/>
-            <TabControl SelectedIndex="{Binding StepsIndex}" Grid.Row="2" Height="Auto">
+            <TabControl SelectedIndex="{Binding StepsIndex}" Grid.Row="2" VerticalAlignment="Stretch" Height="Auto">
                 <TabItem Width="0" Height=".1">
                     <step:GetconnectedView DataContext="{Binding StepsViewmodel}"/>
                 </TabItem>
