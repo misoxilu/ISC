@@ -4,12 +4,8 @@ using System.Windows.Media.Imaging;
 
 namespace ISC.Model.Entity.Working.Locatepart
 {
-    public class PartGroup 
+    public class PartGroup :Item
     {
-        public string Name { get; set; }
-
-        public BitmapImage BitmapImage { get; set; }
-
         public List<PartItem> PartItems { get; set; }
     }
 }

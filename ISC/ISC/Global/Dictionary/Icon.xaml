@@ -17,9 +17,14 @@
     <BitmapImage x:Key="I_Undo" UriSource="/ISC;component/Global/Resource/Icons/Undo.ico" />
     <BitmapImage x:Key="I_Redo" UriSource="/ISC;component/Global/Resource/Icons/Redo.ico" />
     <BitmapImage x:Key="I_File" UriSource="/ISC;component/Global/Resource/Icons/File.ico" />
+
+    <BitmapImage x:Key="I_Pattern" UriSource="/ISC;component/Global/Resource/Icons/File.ico" />
+    <BitmapImage x:Key="I_Patterns" UriSource="/ISC;component/Global/Resource/Icons/File.ico" />
     <BitmapImage x:Key="I_Edge" UriSource="/ISC;component/Global/Resource/Icons/File.ico" />
-    <BitmapImage x:Key="I_Point" UriSource="/ISC;component/Global/Resource/Icons/Cut.ico" />
+    <BitmapImage x:Key="I_EdgeIntersection" UriSource="/ISC;component/Global/Resource/Icons/File.ico" />
     <BitmapImage x:Key="I_Blob" UriSource="/ISC;component/Global/Resource/Icons/Delete.ico" />
+    <BitmapImage x:Key="I_Blobs" UriSource="/ISC;component/Global/Resource/Icons/Delete.ico" />
+    <BitmapImage x:Key="I_Circle" UriSource="/ISC;component/Global/Resource/Icons/Delete.ico" />
     <BitmapImage x:Key="I_Image" UriSource="/ISC;component/Global/Resource/Icons/Image.ico" />
     <BitmapImage x:Key="I_Document" UriSource="/ISC;component/Global/Resource/Icons/Document.ico"/>
     <!--<Image x:Key="Open" Source="Open.ico"/>-->

@@ -8,8 +8,12 @@ namespace ISC.Global.Common.Enumeration
 {
     public enum PartType
     {
-        Edge = 0,
-        Point = 1,
-        Blob = 2
+        Pattern = 0,
+        Patterns = 1,
+        Edge = 2,
+        EdgeIntersection = 3,
+        Blob = 4,
+        Blobs = 5,
+        Circle = 6
     }
 }

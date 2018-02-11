@@ -13,7 +13,21 @@
     <system:String x:Key="SwitchView">切换视图</system:String>
     
     <system:String x:Key="L_Open">打开</system:String>
+    
+    <system:String x:Key="L_Pattern">图案</system:String>
+    <system:String x:Key="L_Patterns">多图案</system:String>
     <system:String x:Key="L_Edge">边</system:String>
-    <system:String x:Key="L_Point">点</system:String>
+    <system:String x:Key="L_EdgeIntersection">边缘交点</system:String>
     <system:String x:Key="L_Blob">斑点</system:String>
+    <system:String x:Key="L_Blobs">多斑点</system:String>
+    <system:String x:Key="L_Circle">圆形</system:String>
+    
+    <system:String x:Key="L_PatternDiscription">图案描述。</system:String>
+    <system:String x:Key="L_PatternsDiscription">多图案描述。</system:String>
+    <system:String x:Key="L_EdgeDiscription">定位线型边缘；报告找到的边缘中点的X、Y坐标及其角度方向。通常用作固定参照物来定位其他视觉工具。</system:String>
+    <system:String x:Key="L_EdgeIntersectionDiscription">边缘交点描述。</system:String>
+    <system:String x:Key="L_BlobDiscription">斑点描述。</system:String>
+    <system:String x:Key="L_BlobsDiscription">多斑点描述。</system:String>
+    <system:String x:Key="L_CircleDiscription">多斑点描述。</system:String>
+    <system:String x:Key="L_EdgeDirection">通过单机从可用的“智能特征”中选择边特征。选择边后，按“确定”按钮。</system:String>
 </ResourceDictionary>

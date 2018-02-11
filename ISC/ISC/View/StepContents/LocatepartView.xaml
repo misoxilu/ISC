@@ -6,7 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
     xmlns:LiveCharts="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
     mc:Ignorable="d" 
-    d:DesignHeight="300" d:DesignWidth="600">
+    d:DesignHeight="300" d:DesignWidth="900">
     <UserControl.Resources>
         <ContextMenu x:Key="ContextMenu">
             <MenuItem Header="MenuItem1"  />
@@ -45,38 +45,59 @@
             <TabControl SelectedIndex="{Binding FlowIndex}" BorderThickness="0" Margin="5,0,0,0" DockPanel.Dock="Right">
                 <TabItem Height=".1">
                     <GroupBox HorizontalAlignment="Left" Header="Discription" Width="300">
-                        
-                    </GroupBox>
-                </TabItem>
-                <TabItem Height=".1">
-                    <GroupBox HorizontalAlignment="Left" Header="方向" Width="300">
-
+                        <TextBlock Text="{Binding Discription}" TextWrapping="Wrap" Margin="5"/>
                     </GroupBox>
                 </TabItem>
                 <TabItem Height=".1">
                     <Grid>
+                        <GroupBox HorizontalAlignment="Left" Header="方向" Width="300" >
+                            <TextBlock Text="{DynamicResource L_EdgeDirection}" TextWrapping="Wrap" Margin="5"/>
+                        </GroupBox>
+                        <Button Content="确定" Command="{Binding ClickOk}" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="120,10" Width="80" Height="22"/>
+                        <Button Content="取消" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="210,10" Width="80" Height="22"/>
+
+                    </Grid>
+                </TabItem>
+                <TabItem Height=".1">
+                    <Grid>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="50*"/>
+                            <ColumnDefinition Width="50*" MinWidth="100"/>
                             <ColumnDefinition Width="3"/>
-                            <ColumnDefinition Width="50*"/>
+                            <ColumnDefinition Width="50*" MinWidth="100"/>
                         </Grid.ColumnDefinitions>
-                        <TabControl Grid.Column="0">
-                            <TabItem Height="20" Width="50" Header="常规">
-                                <Grid>
-                                    
-                                </Grid>
+                        <TabControl Grid.Column="0" >
+                            <TabItem Height="20" Width="50" Header="常规" >
+                                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                                    <Grid >
+                                        <TextBlock Text="工具名称" Margin="10,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                                        <TextBox HorizontalAlignment="Stretch" Margin="111,10,30,0" VerticalAlignment="Top"/>
+
+                                        <TextBlock Text="工具定位器" Margin="10,35,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                                        <ComboBox HorizontalAlignment="Stretch" Margin="111,33,30,0" VerticalAlignment="Top"/>
+
+                                        <TextBlock Text="工具已启用" Margin="10,60,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                                        <ComboBox HorizontalAlignment="Stretch" Margin="111,58,30,0" VerticalAlignment="Top"/>
+
+                                        <TextBlock Text="包括在作业通过中" Margin="10,85,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                                        <CheckBox HorizontalAlignment="Left" Margin="110,85,0,0" VerticalAlignment="Top"/>
+
+                                        <TextBlock Text="执行时间(ms)" Margin="10,110,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                                        <TextBox IsReadOnly="True" HorizontalAlignment="Stretch" Margin="111,110,30,0" VerticalAlignment="Top"/>
+
+                                        <TextBlock Text="说明" Margin="10,135,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                                        <TextBox MinHeight="70" HorizontalAlignment="Stretch" Margin="11,155,30,0" VerticalAlignment="Stretch"/>
+                                    </Grid>
+                                </ScrollViewer>
                             </TabItem>
                             <TabItem Height="20" Width="50" Header="设置"/>
                         </TabControl>
-
                         <GridSplitter Grid.Column="1" Width="3" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
-
                         <LiveCharts:CartesianChart Grid.Column="2" Series="{Binding SeriesCollection}" LegendLocation="Bottom">
                             <LiveCharts:CartesianChart.AxisX>
-                                <LiveCharts:Axis Title="时间" FontWeight="Bold" LabelFormatter="{Binding XFormatter}"/>
+                                <LiveCharts:Axis Title="偏移量" FontWeight="Bold" LabelFormatter="{Binding XFormatter}"/>
                             </LiveCharts:CartesianChart.AxisX>
                             <LiveCharts:CartesianChart.AxisY>
-                                <LiveCharts:Axis Title="荧光" FontWeight="Bold" />
+                                <LiveCharts:Axis Title="得分" FontWeight="Bold" />
                             </LiveCharts:CartesianChart.AxisY>
                         </LiveCharts:CartesianChart>
                     </Grid>

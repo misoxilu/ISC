@@ -477,8 +477,6 @@ D:\ISC\ISC\ISC\bin\Debug\Global\Resource\Icons\Delete.ico
 D:\ISC\ISC\ISC\bin\Debug\Global\Resource\Icons\Document.ico
 D:\ISC\ISC\ISC\bin\Debug\Global\Resource\Icons\File.ico
 D:\ISC\ISC\ISC\bin\Debug\Global\Resource\Icons\Image.ico
-D:\ISC\ISC\ISC\bin\Debug\Global\Resource\Icons\Network.ico
-D:\ISC\ISC\ISC\bin\Debug\Global\Resource\Icons\Network2.ico
 D:\ISC\ISC\ISC\bin\Debug\Global\Resource\Icons\New.ico
 D:\ISC\ISC\ISC\bin\Debug\Global\Resource\Icons\Open.ico
 D:\ISC\ISC\ISC\bin\Debug\Global\Resource\Icons\Open_dis.ico
@@ -580,3 +578,12 @@ C:\zhaomin\sourcecode\Others\ISC\ISC\ISC\bin\Debug\Global\Resource\Dll\LiveChart
 C:\zhaomin\sourcecode\Others\ISC\ISC\ISC\bin\Debug\Global\Resource\Dll\LiveCharts.Wpf.dll
 C:\zhaomin\sourcecode\Others\ISC\ISC\ISC\bin\Debug\LiveCharts.dll
 C:\zhaomin\sourcecode\Others\ISC\ISC\ISC\bin\Debug\LiveCharts.Wpf.dll
+D:\ISC\ISC\ISC\bin\Debug\Global\Dictionary\Initialization.json
+D:\ISC\ISC\ISC\bin\Debug\Global\Resource\Dll\LiveCharts.dll
+D:\ISC\ISC\ISC\bin\Debug\Global\Resource\Dll\LiveCharts.Wpf.dll
+D:\ISC\ISC\ISC\bin\Debug\Global\Resource\Dll\Microsoft.Expression.Effects.dll
+D:\ISC\ISC\ISC\bin\Debug\Global\Resource\Icons\NetworkRoot.ico
+D:\ISC\ISC\ISC\bin\Debug\Global\Resource\Icons\NetworkChild.ico
+D:\ISC\ISC\ISC\bin\Debug\LiveCharts.dll
+D:\ISC\ISC\ISC\bin\Debug\LiveCharts.Wpf.dll
+D:\ISC\ISC\ISC\obj\Debug\Global\Dictionary\Control\ImageEffect.baml
