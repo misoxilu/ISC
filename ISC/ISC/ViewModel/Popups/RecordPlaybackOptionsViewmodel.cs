@@ -14,6 +14,9 @@ namespace ISC.ViewModel.Popups
         public RecordPlaybackOptionsViewmodel()
         {
             this.RecrdPlaybackOptions = General.Initialization.RecordPlaybackOptions;
+            this.RecrdPlaybackOptions.RecordOptions.FilePaths.Add("AAA");
+            this.RecrdPlaybackOptions.RecordOptions.FilePaths.Add("BBB");
+            this.RecrdPlaybackOptions.RecordOptions.FilePaths.Add("CCC");
         }
     }
 }

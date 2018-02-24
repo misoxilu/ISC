@@ -136,5 +136,5 @@ namespace ISC.Global.Common
         {
             return (T)Enum.Parse(typeof(T), enumName);
         }
-}
+    }
 }

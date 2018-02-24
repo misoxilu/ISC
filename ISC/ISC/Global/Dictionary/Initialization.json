@@ -1,7 +1,10 @@
 {
-    "RecordPlaybackOptions": {
+    "RecordPlaybackOptions": 
+    {
         "PlaybackOptions": null,
-        "RecordOptions": {
+        "RecordOptions":
+        {
+            "FilePaths": [ "Â·¾¶1", "Â·¾¶2", "Â·¾¶3" ],
             "ImageCount": 5,
             "RecordFilePath": "C:\\zhaomin\\sourcecode\\Others\\ISC\\ISC\\ISC\\bin\\Debug\\Global\\Dictionary"
         }

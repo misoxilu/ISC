@@ -1,4 +1,5 @@
 ﻿using ISC.Model.Entity.Base;
+using System.Collections.Generic;
 using System.Runtime.Serialization;
 using System.Web.Script.Serialization;
 
@@ -14,6 +15,17 @@ namespace ISC.Model.Entity.Working.Initializations
             {
                 recordFilePath = value;
                 this.RaisePropertyChanged(nameof(RecordFilePath));
+            }
+        }
+
+        private List<string> filePaths=new List<string>();
+        public List<string> FilePaths
+        {
+            get { return filePaths; }
+            set
+            {
+                filePaths = value;
+                this.RaisePropertyChanged(nameof(FilePaths));
             }
         }
 
