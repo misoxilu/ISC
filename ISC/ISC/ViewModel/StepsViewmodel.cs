@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 
 namespace ISC.ViewModel
 {
@@ -14,6 +15,11 @@ namespace ISC.ViewModel
         public RelayCommand GetConnected => new RelayCommand(() =>
         {
             General.RaiseEventHandler(this, EventName.GetConnected, null);
+        });
+
+        public RelayCommand StackPanelSizeChanged => new RelayCommand((o)=> 
+        {
+            var StackPanel = (StackPanel)o;
         });
     }
 }

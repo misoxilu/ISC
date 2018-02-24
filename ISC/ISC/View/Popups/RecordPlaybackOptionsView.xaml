@@ -28,7 +28,7 @@
                     </Grid.RowDefinitions>
                     <!--第一行-->
                     <GroupBox Grid.Row="0" Grid.ColumnSpan="2" Header="记录文件夹" BorderBrush="Gray" BorderThickness="1" Margin="5"/>
-                    <TextBox Text="{Binding RecrdPlaybackOptions.RecordOptions.RecordFilePath}" Grid.Row="0" Grid.ColumnSpan="2" Height="25" VerticalAlignment="Top" Margin="20,30,80,10"/>
+                    <ComboBox  IsEditable="True" ItemsSource="{Binding RecrdPlaybackOptions.RecordOptions.FilePaths}" Text="{Binding RecrdPlaybackOptions.RecordOptions.RecordFilePath}" Grid.Row="0" Grid.ColumnSpan="2" Height="25" VerticalAlignment="Top" Margin="20,30,80,10"/>
                     <Button Grid.Row="0" Grid.ColumnSpan="2" Content="..." Height="25" Width="50" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="20,30"/>
                     <TextBlock Grid.Row="0" Text="图像计数：" Height="25" Width="70" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,62,0,0"/>
                     <TextBox Text="{Binding RecrdPlaybackOptions.RecordOptions.ImageCount}" Grid.Row="0" Height="22" Width="70" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,62,0,0"/>
