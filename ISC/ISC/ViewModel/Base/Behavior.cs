@@ -50,16 +50,16 @@ namespace ISC.ViewModel.Base
                         {
                             if (model.Name.Split('.')[1] == "txt")
                             {
-                                viewModel.BBB(true);
+                                viewModel.ChangeContextMenu(true);
                             }
                             else
                             {
-                                viewModel.BBB(false);
+                                viewModel.ChangeContextMenu(false);
                             }
                         }
                         else
                         {
-                            viewModel.BBB();
+                            viewModel.ChangeContextMenu();
                         }
                     }
                     break;

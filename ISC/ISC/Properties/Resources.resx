@@ -184,4 +184,13 @@
   <data name="I_NetworkRoot" xml:space="preserve">
     <value>I_NetworkRoot</value>
   </data>
+  <data name="FileItem1" xml:space="preserve">
+    <value>FileItem1</value>
+  </data>
+  <data name="FileItem2" xml:space="preserve">
+    <value>FileItem2</value>
+  </data>
+  <data name="SensorItem" xml:space="preserve">
+    <value>SensorItem</value>
+  </data>
 </root>

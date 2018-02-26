@@ -115,6 +115,24 @@ namespace ISC.Properties {
         }
         
         /// <summary>
+        ///   查找类似 FileItem1 的本地化字符串。
+        /// </summary>
+        internal static string FileItem1 {
+            get {
+                return ResourceManager.GetString("FileItem1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 FileItem2 的本地化字符串。
+        /// </summary>
+        internal static string FileItem2 {
+            get {
+                return ResourceManager.GetString("FileItem2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 {0}\\Global\\File 的本地化字符串。
         /// </summary>
         internal static string FilePath {
@@ -237,6 +255,15 @@ namespace ISC.Properties {
         internal static string SelectionView {
             get {
                 return ResourceManager.GetString("SelectionView", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 SensorItem 的本地化字符串。
+        /// </summary>
+        internal static string SensorItem {
+            get {
+                return ResourceManager.GetString("SensorItem", resourceCulture);
             }
         }
         
