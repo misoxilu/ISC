@@ -110,6 +110,7 @@
     <Compile Include="Global\Common\Enumeration\LayoutType.cs" />
     <Compile Include="Global\Common\Enumeration\PaneState.cs" />
     <Compile Include="Global\Common\Enumeration\PartType.cs" />
+    <Compile Include="Global\Common\Enumeration\RightClickTarget.cs" />
     <Compile Include="Global\Common\Enumeration\WorkingMode.cs" />
     <Compile Include="Global\Common\EventHandlerArgs.cs" />
     <Compile Include="Global\Common\GeneralProperty.cs" />

@@ -4,6 +4,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
     xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+    xmlns:behavior="clr-namespace:ISC.ViewModel.Base"
     xmlns:local="clr-namespace:ISC.View" 
     x:Class="ISC.View.FileView" 
     mc:Ignorable="d"
@@ -26,5 +27,9 @@
         SelectedItem="{Binding SelectedItem,Mode=OneWayToSource}"
         Template="{Binding FileListboxControlTemplate}" 
         ItemTemplate="{Binding FileListboxDataTemplate}"
-        ItemContainerStyle="{StaticResource ItemContainerStyle}"/>
+        ItemContainerStyle="{StaticResource ItemContainerStyle}">
+        <i:Interaction.Behaviors>
+            <behavior:RightClickBehavior ViewModel="{Binding Mode=OneWay}" RightClickTarget="ListBoxItem"/>
+        </i:Interaction.Behaviors>
+    </ListBox>
 </UserControl>

@@ -14,6 +14,17 @@
         <MenuItem Header="重命名" Visibility="{Binding SelectedItem.State}" />
     </ContextMenu>
 
+    <ContextMenu x:Key="FileItem1" DataContext="{Binding Path=PlacementTarget.Tag, RelativeSource={RelativeSource Self}}">
+        <MenuItem Header="复制"  />
+    </ContextMenu>
+    
+    <ContextMenu x:Key="FileItem2" DataContext="{Binding Path=PlacementTarget.Tag, RelativeSource={RelativeSource Self}}">
+        <MenuItem Header="复制"  />
+        <Separator />
+        <MenuItem Header="删除" />
+        <MenuItem Header="重命名" />
+    </ContextMenu>
+
     <!--listbox menu-->
     <ContextMenu x:Key="SensorBlank">
         <MenuItem Header="查看" >

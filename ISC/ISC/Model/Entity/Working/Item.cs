@@ -17,7 +17,16 @@ namespace ISC.Model.Entity.Working
             this.Icon = Icon;
         }
 
-        public Visibility State { get; set; }
+        private Visibility _state;
+        public Visibility State
+        {
+            get { return _state; }
+            set
+            {
+                _state = value;
+                this.RaisePropertyChanged(nameof(State));
+            }
+        }
 
         public DirectoryRank Rank { get; set; }
 

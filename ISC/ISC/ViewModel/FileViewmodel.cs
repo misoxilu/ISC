@@ -112,5 +112,15 @@ namespace ISC.ViewModel
         public RelayCommand Open => new RelayCommand(() => { this.ChangeDataLayout(this.SelectedItem); });
 
         public RelayCommand ChangeLayout => new RelayCommand((o) => this.ChangeTemplate(General.GetEnumItem<LayoutType>(o.ToString())));
+
+
+        public void BBB(bool? aaa = null)
+        {
+
+            if (aaa == true) this.FileItemContextMenu = General.FindResource<ContextMenu>("FileItem1");
+            else if (aaa == false) this.FileItemContextMenu = General.FindResource<ContextMenu>("FileItem2");
+            else this.FileItemContextMenu = General.FindResource<ContextMenu>("SensorItem");
+            this.RaisePropertyChanged(nameof(this.FileItemContextMenu));
+        }
     }
 }

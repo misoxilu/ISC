@@ -5,7 +5,10 @@ using ISC.ViewModel.Base;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
+using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
 namespace ISC.ViewModel
@@ -39,5 +42,9 @@ namespace ISC.ViewModel
             this.RaisePropertyChanged(nameof(Network));
             this.RaisePropertyChanged(nameof(Network2));
         }
+
+
+
+        
     }
 }

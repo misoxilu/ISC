@@ -4,6 +4,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"   
     xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+    xmlns:behavior="clr-namespace:ISC.ViewModel.Base"
     xmlns:local="clr-namespace:ISC.View" 
     x:Class="ISC.View.NetworkView"
     mc:Ignorable="d"
@@ -27,6 +28,14 @@
     </UserControl.Resources>
     <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
         <TreeView x:Name="TreeView_Network" ContextMenu="{Binding BlankMenu}" ItemsSource="{Binding SensorGroups}"  ItemTemplate="{StaticResource TreeViewItem}">
+            <!--<TreeView.ItemContainerStyle>
+                <Style TargetType="{x:Type TreeViewItem}">
+                    <EventSetter Event="TreeViewItem.PreviewMouseRightButtonDown" Handler="TreeViewItem_PreviewMouseRightButtonDown"/>
+                </Style>
+            </TreeView.ItemContainerStyle>-->
+            <i:Interaction.Behaviors>
+                <behavior:RightClickBehavior RightClickTarget="TreeViewItem"/>
+            </i:Interaction.Behaviors>
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="SelectedItemChanged">
                     <i:InvokeCommandAction Command="{Binding SelectedItemChanged}" CommandParameter="{Binding SelectedItem, ElementName=TreeView_Network}"/>
