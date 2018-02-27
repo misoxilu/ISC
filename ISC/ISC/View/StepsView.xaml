@@ -7,28 +7,85 @@
     xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
     mc:Ignorable="d" 
     d:DesignHeight="300" d:DesignWidth="300">
-    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
-        <StackPanel x:Name="StackPanel" Orientation="Vertical">
-            <TextBlock Text="1.开始" Margin="5"/>
-            <Button Content="已连接" Height="30" Margin="5"/>
-            <Button Content="设置图像" Height="30" Margin="5"/>
-            <TextBlock Text="2.设置工具" Margin="5"/>
-            <Button Content="定位部件"  Command="{Binding GetConnected}"  Height="30" Margin="5"/>
-            <Button Content="检查部件" Height="30" Margin="5"/>
-            <TextBlock Text="3.配置结果" Margin="5"/>
-            <Button Content="输入" Height="30" Margin="5"/>
-            <Button Content="输出" Height="30" Margin="5"/>
-            <Button Content="通信" Height="30" Margin="5"/>
-            <TextBlock Text="4.完成" Margin="5"/>
-            <Button Content="胶片" Height="30" Margin="5"/>
-            <Button Content="保存作业" Height="30" Margin="5"/>
-            <Button Content="运行作业" Height="30" Margin="5"/>
+    <StackPanel x:Name="StackPanel" Orientation="Vertical">
+        <TextBlock Text="1.开始" Margin="5"/>
+        <Button Height="30" Margin="5" HorizontalContentAlignment="{Binding HorizontalAlignment}">
+            <StackPanel Orientation="Horizontal">
+                <Image Stretch="Fill" Source="{StaticResource I_Blob}" />
+                <TextBlock Text="已连接" Margin="5" Visibility="{Binding Visibility}"/>
+            </StackPanel>
+        </Button>
 
-            <i:Interaction.Triggers>
-                <i:EventTrigger EventName="SizeChanged">
-                    <i:InvokeCommandAction Command="{Binding StackPanelSizeChanged}" CommandParameter="{Binding ElementName=StackPanel}"/>
-                </i:EventTrigger>
-            </i:Interaction.Triggers>
-        </StackPanel>
-    </ScrollViewer>
+        <Button Height="30" Margin="5" HorizontalContentAlignment="{Binding HorizontalAlignment}">
+            <StackPanel Orientation="Horizontal"  >
+                <Image Stretch="Fill" Source="{StaticResource I_Blob}" />
+                <TextBlock Text="设置图象" Margin="5" Visibility="{Binding Visibility}"/>
+            </StackPanel>
+        </Button>
+
+        <TextBlock Text="2.设置工具" Margin="5"/>
+        <Button  Command="{Binding GetConnected}"  Height="30" Margin="5" HorizontalContentAlignment="{Binding HorizontalAlignment}">
+            <StackPanel Orientation="Horizontal" >
+                <Image Stretch="Fill" Source="{StaticResource I_Blob}" />
+                <TextBlock Text="定位部件" Margin="5" Visibility="{Binding Visibility}"/>
+            </StackPanel>
+        </Button>
+
+        <Button Height="30" Margin="5" HorizontalContentAlignment="{Binding HorizontalAlignment}">
+            <StackPanel Orientation="Horizontal"  >
+                <Image Stretch="Fill" Source="{StaticResource I_Blob}" />
+                <TextBlock Text="检查部件" Margin="5" Visibility="{Binding Visibility}"/>
+            </StackPanel>
+        </Button>
+
+        <TextBlock Text="3.配置结果" Margin="5" />
+        <Button Height="30" Margin="5" HorizontalContentAlignment="{Binding HorizontalAlignment}">
+            <StackPanel Orientation="Horizontal">
+                <Image Stretch="Fill" Source="{StaticResource I_Blob}" />
+                <TextBlock Text="输入" Margin="5" Visibility="{Binding Visibility}"/>
+            </StackPanel>
+        </Button>
+
+        <Button Height="30" Margin="5" HorizontalContentAlignment="{Binding HorizontalAlignment}">
+            <StackPanel Orientation="Horizontal" >
+                <Image Stretch="Fill" Source="{StaticResource I_Blob}" />
+                <TextBlock Text="输出" Margin="5" Visibility="{Binding Visibility}"/>
+            </StackPanel>
+        </Button>
+
+        <Button Height="30" Margin="5" HorizontalContentAlignment="{Binding HorizontalAlignment}">
+            <StackPanel Orientation="Horizontal" >
+                <Image Stretch="Fill" Source="{StaticResource I_Blob}" />
+                <TextBlock Text="通信" Margin="5" Visibility="{Binding Visibility}"/>
+            </StackPanel>
+        </Button>
+
+        <TextBlock Text="4.完成" Margin="5" />
+        <Button Height="30" Margin="5" HorizontalContentAlignment="{Binding HorizontalAlignment}">
+            <StackPanel Orientation="Horizontal" >
+                <Image Stretch="Fill" Source="{StaticResource I_Blob}" />
+                <TextBlock Text="胶片" Margin="5" Visibility="{Binding Visibility}"/>
+            </StackPanel>
+        </Button>
+
+        <Button Height="30" Margin="5" HorizontalContentAlignment="{Binding HorizontalAlignment}">
+            <StackPanel Orientation="Horizontal" >
+                <Image Stretch="Fill" Source="{StaticResource I_Blob}" />
+                <TextBlock Text="保存作业" Margin="5" Visibility="{Binding Visibility}"/>
+            </StackPanel>
+        </Button>
+
+        <Button Height="30" Margin="5" HorizontalContentAlignment="{Binding HorizontalAlignment}">
+            <StackPanel Orientation="Horizontal" >
+                <Image Stretch="Fill" Source="{StaticResource I_Blob}" />
+                <TextBlock Text="运行作业" Margin="5" Visibility="{Binding Visibility}"/>
+            </StackPanel>
+        </Button>
+
+        <i:Interaction.Triggers>
+            <i:EventTrigger EventName="SizeChanged">
+                <i:InvokeCommandAction Command="{Binding StackPanelSizeChanged}" CommandParameter="{Binding ElementName=StackPanel}"/>
+            </i:EventTrigger>
+        </i:Interaction.Triggers>
+    </StackPanel>
 </UserControl>

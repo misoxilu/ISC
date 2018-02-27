@@ -33,7 +33,6 @@ namespace ISC.ViewModel
             set { stepsIndex = value; this.RaisePropertyChanged(nameof(this.StepsIndex)); }
         }
 
-
         public SensorstatusMenuViewmodel SsmViewmodel { get; private set; } = new SensorstatusMenuViewmodel();
         public EasybuilderMenuViewmodel EbmViewmodel { get; private set; } = new EasybuilderMenuViewmodel();
         public DockViewmodel DockViewmodel { get; private set; } = new DockViewmodel();
@@ -75,9 +74,22 @@ namespace ISC.ViewModel
                     case EventName.GetConnected: { this.StepsIndex = 2; break; }
                     case EventName.PopupWindow: { General.PopupView(e.Value.ToString()); break; }
                     case EventName.CloseWindow: { General.CloseView(); break; }
+                    case EventName.ChangeFileDataLayout: { this.ChangeFileDataLayout((Item)e.Value); break; }
                     default: break;
                 }
             };
+        }
+
+        private void ChangeFileDataLayout(Item item)
+        {
+            if(item.Rank.Equals(DirectoryRank.Group))
+            {
+                this.DockViewmodel.FileViewmodel.ChangeDataLayout();
+            }
+            else
+            {
+                this.DockViewmodel.FileViewmodel.ChangeDataLayout(item);
+            }
         }
 
         private void SwitchWorkingView(WorkingMode workingMode)

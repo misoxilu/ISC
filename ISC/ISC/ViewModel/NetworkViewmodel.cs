@@ -15,8 +15,6 @@ namespace ISC.ViewModel
 {
     public class NetworkViewmodel : Base.ViewModel
     {
-       
-
         public ContextMenu BlankMenu { get; private set; } = General.FindResource<ContextMenu>(General.GetEnumName(DirectoryRank.Group));
 
         public BitmapImage Network { get; private set; } = General.FindIconResource(Properties.Resources.I_NetworkRoot);
@@ -27,24 +25,20 @@ namespace ISC.ViewModel
 
         public RelayCommand SelectedItemChanged => new RelayCommand((o) =>
         {
-            this.BlankMenu = General.FindResource<ContextMenu>(General.GetEnumName(((Item)o).Rank));
+            this.BlankMenu = General.FindResource<ContextMenu>(General.GetEnumName((o as Item).Rank));
             this.RaisePropertyChanged(nameof(this.BlankMenu));
         });
 
-        public RelayCommand RightClick => new RelayCommand((o) =>
+        public void LeftClick(Item item)
         {
-            var a = o;
-            //General.RaiseEventHandler(this, EventName.RightClickCollectionItem, "TreeView_Network");
-        });
+              General.RaiseEventHandler(this, EventName.ChangeFileDataLayout, item);
+         }
+
 
         public NetworkViewmodel()
         {
             this.RaisePropertyChanged(nameof(Network));
             this.RaisePropertyChanged(nameof(Network2));
         }
-
-
-
-        
     }
 }

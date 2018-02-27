@@ -26,29 +26,22 @@ namespace ISC.ViewModel
 
         public FileViewmodel() { }
 
-        public void ChangeDataLayout(Item item)
+        public void ChangeDataLayout(Item item = null)
         {
-            switch (item.Rank)
+            if (item != null)
             {
-                case DirectoryRank.Sensor:
+                if (item.Rank.Equals(DirectoryRank.Sensor))
                 {
                     this.Files = ((SensorItem)item).Files;
-                    this.FileItemContextMenu = General.FindResource<ContextMenu>("FileItem");
                     this.FileBlankContextMenu = General.FindResource<ContextMenu>("FileBlank");
-                    break;
-                }
-                //case DirectoryRank.Child:
-                //{
-                //    this.Files = ((SensorItem)item).Files;
-                //    this.FileListboxItemContextMenu = General.FindResource("FileItem") as ContextMenu;
-                //    break;
-                //}
-                default:
-                {
-
-                    break;
                 }
             }
+            else
+            {
+                this.Files = General.SensorGroups[0].SensorItems;
+                this.FileBlankContextMenu = General.FindResource<ContextMenu>("SensorBlank");
+            }
+
             this.RaisePropertyChanged(nameof(this.Files));
             this.RaisePropertyChanged(nameof(this.FileItemContextMenu));
             this.RaisePropertyChanged(nameof(this.FileBlankContextMenu));
@@ -101,11 +94,7 @@ namespace ISC.ViewModel
 
         public RelayCommand Loaded => new RelayCommand(() =>
         {
-            this.Files = General.SensorGroups[0].SensorItems;
-            this.FileItemContextMenu = General.FindResource<ContextMenu>("SensorItem");
-            this.FileBlankContextMenu = General.FindResource<ContextMenu>("SensorBlank");
-            this.RaisePropertyChanged(nameof(this.FileBlankContextMenu));
-            this.RaisePropertyChanged(nameof(this.Files));
+            this.ChangeDataLayout();
             this.ChangeTemplate(LayoutType.List);
         });
 

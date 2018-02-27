@@ -30,7 +30,7 @@
                     </dock:LayoutAnchorablePane>
                 </dock:LayoutAnchorablePaneGroup>
                 
-                <dock:LayoutAnchorablePaneGroup  Orientation="Horizontal" DockWidth="1*" DockHeight="*">
+                <dock:LayoutAnchorablePaneGroup  Orientation="Horizontal" DockMinWidth="50" DockWidth="1*" DockHeight="*">
                     <dock:LayoutAnchorablePane >
                         <dock:LayoutAnchorable x:Name="StepView" CanAutoHide="False" CanFloat="False" CanClose="False" CanHide="False">
                             <local:StepsView DataContext="{Binding StepsViewmodel}"/>

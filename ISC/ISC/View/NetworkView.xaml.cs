@@ -24,21 +24,5 @@ namespace ISC.View
         {
             InitializeComponent();
         }
-
-        private void TreeViewItem_PreviewMouseRightButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            if (VisualUpwardSearch<TreeViewItem>(e.OriginalSource as DependencyObject) is TreeViewItem treeViewItem)
-            {
-                treeViewItem.Focus();
-                e.Handled = true;
-            }
-        }
-        static DependencyObject VisualUpwardSearch<T>(DependencyObject source)
-        {
-            while (source != null && source.GetType() != typeof(T))
-                source = VisualTreeHelper.GetParent(source);
-
-            return source;
-        }
     }
 }

@@ -19,6 +19,7 @@ namespace ISC.Global.Common.Enumeration
         HideNetworkPane,
         ShowSelectionPane,
         HideSelectionPane,
-        RightClickCollectionItem
+        RightClickCollectionItem,
+        ChangeFileDataLayout
     }
 }

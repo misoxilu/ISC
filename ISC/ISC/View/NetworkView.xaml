@@ -35,20 +35,13 @@
             </TreeView.ItemContainerStyle>-->
             <i:Interaction.Behaviors>
                 <behavior:RightClickBehavior RightClickTarget="TreeViewItem"/>
+                <behavior:LeftClickBehavior ViewModel="{Binding Mode=OneWay}"/>
             </i:Interaction.Behaviors>
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="SelectedItemChanged">
                     <i:InvokeCommandAction Command="{Binding SelectedItemChanged}" CommandParameter="{Binding SelectedItem, ElementName=TreeView_Network}"/>
                 </i:EventTrigger>
             </i:Interaction.Triggers>
-            <TreeView.InputBindings>
-                <MouseBinding 
-                    Gesture="RightClick" 
-                    Command="{Binding DataContext.RightClick, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}"
-                    CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:NetworkView}}}"/>
-            </TreeView.InputBindings>
         </TreeView>
     </ScrollViewer>
-
-
 </UserControl>

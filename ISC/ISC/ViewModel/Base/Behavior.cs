@@ -12,7 +12,16 @@ using System.Windows.Media;
 
 namespace ISC.ViewModel.Base
 {
-    public class RightClickBehavior : Behavior<UIElement>
+    public class MyBehavior : Behavior<UIElement>
+    {
+        public DependencyObject VisualUpwardSearch<T>(DependencyObject source)
+        {
+            while (source != null && source.GetType() != typeof(T)) source = VisualTreeHelper.GetParent(source);
+            return source;
+        }
+    }
+
+    public class RightClickBehavior :MyBehavior
     {
         public object ViewModel
         {
@@ -38,15 +47,15 @@ namespace ISC.ViewModel.Base
 
         private void AssociatedObject_PreviewMouseRightButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-           switch(this.RightClickTarget)
+            switch (this.RightClickTarget)
             {
                 case RightClickTarget.ListBoxItem:
                 {
                     var viewModel = this.ViewModel as FileViewmodel;
-                    if (VisualUpwardSearch<ListBoxItem>(e.OriginalSource as DependencyObject) is ListBoxItem listBoxItem)
+                    if (this.VisualUpwardSearch<ListBoxItem>(e.OriginalSource as DependencyObject) is ListBoxItem listBoxItem)
                     {
                         var model = (Model.Entity.Working.Item)listBoxItem.DataContext;
-                        if(model.Name.Contains('.'))
+                        if (model.Name.Contains('.'))
                         {
                             if (model.Name.Split('.')[1] == "txt")
                             {
@@ -76,16 +85,45 @@ namespace ISC.ViewModel.Base
             }
         }
 
-        private DependencyObject VisualUpwardSearch<T>(DependencyObject source)
-        {
-            while (source != null && source.GetType() != typeof(T)) source = VisualTreeHelper.GetParent(source);
-            return source;
-        }
+        
 
         protected override void OnDetaching()
         {
             base.OnDetaching();
             this.AssociatedObject.PreviewMouseRightButtonDown -= this.AssociatedObject_PreviewMouseRightButtonDown;
+        }
+    }
+
+    public class LeftClickBehavior : MyBehavior
+    {
+        public object ViewModel
+        {
+            get { return GetValue(ViewModelProperty); }
+            set { SetValue(ViewModelProperty, value); }
+        }
+        public static readonly DependencyProperty ViewModelProperty =
+            DependencyProperty.Register(nameof(ViewModel), typeof(object), typeof(LeftClickBehavior), new PropertyMetadata(null));
+
+        protected override void OnAttached()
+        {
+            base.OnAttached();
+            this.AssociatedObject.PreviewMouseLeftButtonDown += LeftClick;
+        }
+
+        private void LeftClick(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            var viewModel = this.ViewModel as NetworkViewmodel;
+            if (this.VisualUpwardSearch<TreeViewItem>(e.OriginalSource as DependencyObject) is TreeViewItem listBoxItem)
+            {
+                var model = (Model.Entity.Working.Item)listBoxItem.DataContext;
+                viewModel.LeftClick(model);
+            }
+        }
+
+        protected override void OnDetaching()
+        {
+            base.OnDetaching();
+            this.AssociatedObject.PreviewMouseRightButtonDown -= this.LeftClick;
         }
     }
 }
