@@ -16,10 +16,8 @@ namespace ISC.ViewModel
         public Thickness Margin { get; set; }
         public HorizontalAlignment HorizontalAlignment { get; set; } = HorizontalAlignment.Left;
         public Visibility Visibility { get; set; } = Visibility.Visible;
-        public RelayCommand GetConnected => new RelayCommand(() =>
-        {
-            General.RaiseEventHandler(this, EventName.GetConnected, null);
-        });
+
+        public RelayCommand SwitchSteps => new RelayCommand((o) => General.RaiseEventHandler(this, EventName.SwitchStep, o), this.CanExecuteSwitchSteps);
 
         public RelayCommand StackPanelSizeChanged => new RelayCommand((o) =>
         {
@@ -40,5 +38,10 @@ namespace ISC.ViewModel
             this.RaisePropertyChanged(nameof(this.Visibility));
             this.RaisePropertyChanged(nameof(this.Margin));
         });
+
+        private bool CanExecuteSwitchSteps(object o)
+        {
+            return Convert.ToInt32(o) % 2 == 0;
+        }
     }
 }

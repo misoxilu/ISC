@@ -9,29 +9,29 @@
     d:DesignHeight="300" d:DesignWidth="300">
     <StackPanel x:Name="StackPanel" Orientation="Vertical">
         <TextBlock Text="1.开始" Margin="5"/>
-        <Button Height="30" Margin="5" HorizontalContentAlignment="{Binding HorizontalAlignment}">
+        <Button Command="{Binding SwitchSteps}" CommandParameter="0" Height="30" Margin="5" HorizontalContentAlignment="{Binding HorizontalAlignment}">
             <StackPanel Orientation="Horizontal">
                 <Image Stretch="Fill" Source="{StaticResource I_Blob}" />
                 <TextBlock Text="已连接" Margin="5" Visibility="{Binding Visibility}"/>
             </StackPanel>
         </Button>
 
-        <Button Height="30" Margin="5" HorizontalContentAlignment="{Binding HorizontalAlignment}">
+        <Button Command="{Binding SwitchSteps}" IsEnabled="False" CommandParameter="1" Height="30" Margin="5" HorizontalContentAlignment="{Binding HorizontalAlignment}">
             <StackPanel Orientation="Horizontal"  >
-                <Image Stretch="Fill" Source="{StaticResource I_Blob}" />
+                <Image Stretch="Fill" Source="{StaticResource I_Blob}" IsEnabled="False"/>
                 <TextBlock Text="设置图象" Margin="5" Visibility="{Binding Visibility}"/>
             </StackPanel>
         </Button>
 
         <TextBlock Text="2.设置工具" Margin="5"/>
-        <Button  Command="{Binding GetConnected}"  Height="30" Margin="5" HorizontalContentAlignment="{Binding HorizontalAlignment}">
+        <Button Command="{Binding SwitchSteps}" CommandParameter="2" Height="30" Margin="5" HorizontalContentAlignment="{Binding HorizontalAlignment}">
             <StackPanel Orientation="Horizontal" >
                 <Image Stretch="Fill" Source="{StaticResource I_Blob}" />
                 <TextBlock Text="定位部件" Margin="5" Visibility="{Binding Visibility}"/>
             </StackPanel>
         </Button>
 
-        <Button Height="30" Margin="5" HorizontalContentAlignment="{Binding HorizontalAlignment}">
+        <Button Command="{Binding SwitchSteps}" CommandParameter="3" Height="30" Margin="5" HorizontalContentAlignment="{Binding HorizontalAlignment}">
             <StackPanel Orientation="Horizontal"  >
                 <Image Stretch="Fill" Source="{StaticResource I_Blob}" />
                 <TextBlock Text="检查部件" Margin="5" Visibility="{Binding Visibility}"/>
@@ -39,21 +39,21 @@
         </Button>
 
         <TextBlock Text="3.配置结果" Margin="5" />
-        <Button Height="30" Margin="5" HorizontalContentAlignment="{Binding HorizontalAlignment}">
+        <Button Command="{Binding SwitchSteps}" CommandParameter="4" Height="30" Margin="5" HorizontalContentAlignment="{Binding HorizontalAlignment}">
             <StackPanel Orientation="Horizontal">
                 <Image Stretch="Fill" Source="{StaticResource I_Blob}" />
                 <TextBlock Text="输入" Margin="5" Visibility="{Binding Visibility}"/>
             </StackPanel>
         </Button>
 
-        <Button Height="30" Margin="5" HorizontalContentAlignment="{Binding HorizontalAlignment}">
+        <Button Command="{Binding SwitchSteps}" CommandParameter="5" Height="30" Margin="5" HorizontalContentAlignment="{Binding HorizontalAlignment}">
             <StackPanel Orientation="Horizontal" >
                 <Image Stretch="Fill" Source="{StaticResource I_Blob}" />
                 <TextBlock Text="输出" Margin="5" Visibility="{Binding Visibility}"/>
             </StackPanel>
         </Button>
 
-        <Button Height="30" Margin="5" HorizontalContentAlignment="{Binding HorizontalAlignment}">
+        <Button Command="{Binding SwitchSteps}" CommandParameter="6" Height="30" Margin="5" HorizontalContentAlignment="{Binding HorizontalAlignment}">
             <StackPanel Orientation="Horizontal" >
                 <Image Stretch="Fill" Source="{StaticResource I_Blob}" />
                 <TextBlock Text="通信" Margin="5" Visibility="{Binding Visibility}"/>
@@ -61,21 +61,21 @@
         </Button>
 
         <TextBlock Text="4.完成" Margin="5" />
-        <Button Height="30" Margin="5" HorizontalContentAlignment="{Binding HorizontalAlignment}">
+        <Button Command="{Binding SwitchSteps}" CommandParameter="7" Height="30" Margin="5" HorizontalContentAlignment="{Binding HorizontalAlignment}">
             <StackPanel Orientation="Horizontal" >
                 <Image Stretch="Fill" Source="{StaticResource I_Blob}" />
                 <TextBlock Text="胶片" Margin="5" Visibility="{Binding Visibility}"/>
             </StackPanel>
         </Button>
 
-        <Button Height="30" Margin="5" HorizontalContentAlignment="{Binding HorizontalAlignment}">
+        <Button Command="{Binding SwitchSteps}" CommandParameter="8" Height="30" Margin="5" HorizontalContentAlignment="{Binding HorizontalAlignment}">
             <StackPanel Orientation="Horizontal" >
                 <Image Stretch="Fill" Source="{StaticResource I_Blob}" />
                 <TextBlock Text="保存作业" Margin="5" Visibility="{Binding Visibility}"/>
             </StackPanel>
         </Button>
 
-        <Button Height="30" Margin="5" HorizontalContentAlignment="{Binding HorizontalAlignment}">
+        <Button Command="{Binding SwitchSteps}" CommandParameter="9" Height="30" Margin="5" HorizontalContentAlignment="{Binding HorizontalAlignment}">
             <StackPanel Orientation="Horizontal" >
                 <Image Stretch="Fill" Source="{StaticResource I_Blob}" />
                 <TextBlock Text="运行作业" Margin="5" Visibility="{Binding Visibility}"/>

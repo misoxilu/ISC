@@ -10,7 +10,7 @@ namespace ISC.Global.Common.Enumeration
     {
         SwitchSensorstatus,
         SwitchEasybuilder,
-        GetConnected,
+        SwitchStep,
         PopupWindow,
         CloseWindow,
         ShowFilePane,

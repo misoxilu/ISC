@@ -28,6 +28,8 @@ namespace ISC.ViewModel
 
         public StepsViewmodel StepsViewmodel { get; set; }
 
+        public PaletteViewmodel JobViewmodel { get; set; }
+
         public void HideSelectionPane()
         {
             //General.SwitchPane(Properties.Resources.SelectionPane, PaneState.Hide);

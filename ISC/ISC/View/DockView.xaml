@@ -29,7 +29,7 @@
                         </dock:LayoutAnchorable>
                     </dock:LayoutAnchorablePane>
                 </dock:LayoutAnchorablePaneGroup>
-                
+
                 <dock:LayoutAnchorablePaneGroup  Orientation="Horizontal" DockMinWidth="50" DockWidth="1*" DockHeight="*">
                     <dock:LayoutAnchorablePane >
                         <dock:LayoutAnchorable x:Name="StepView" CanAutoHide="False" CanFloat="False" CanClose="False" CanHide="False">
@@ -38,11 +38,10 @@
                     </dock:LayoutAnchorablePane>
                 </dock:LayoutAnchorablePaneGroup>
 
-
                 <dock:LayoutAnchorablePaneGroup Orientation="Horizontal" DockWidth="4*" DockHeight="*">
                     <dock:LayoutAnchorablePane >
-                        <dock:LayoutAnchorable x:Name="WorkingPane" CanAutoHide="False" CanFloat="False" CanHide="False" CanClose="False">
-                           
+                        <dock:LayoutAnchorable x:Name="JobView" CanAutoHide="False" CanFloat="False" CanHide="False" CanClose="False">
+                            <local:PaletteView DataContext="{Binding PaletteViewmodel}"/>
                         </dock:LayoutAnchorable>
                     </dock:LayoutAnchorablePane>
                 </dock:LayoutAnchorablePaneGroup>

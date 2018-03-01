@@ -130,6 +130,7 @@
     <Compile Include="ViewModel\DockViewmodel.cs" />
     <Compile Include="Global\Common\Enumeration\Number.cs" />
     <Compile Include="ViewModel\FileViewmodel.cs" />
+    <Compile Include="ViewModel\PaletteViewmodel.cs" />
     <Compile Include="ViewModel\Menus\EasybuilderMenuViewmodel.cs" />
     <Compile Include="ViewModel\Menus\SensorstatusMenuViewmodel.cs" />
     <Compile Include="ViewModel\NetworkViewmodel.cs" />
@@ -145,6 +146,9 @@
     </Compile>
     <Compile Include="View\JobView.xaml.cs">
       <DependentUpon>JobView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PaletteView.xaml.cs">
+      <DependentUpon>PaletteView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Popups\LogOnOffView.xaml.cs">
       <DependentUpon>LogOnOffView.xaml</DependentUpon>
@@ -273,6 +277,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\JobView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PaletteView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

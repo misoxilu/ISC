@@ -71,7 +71,7 @@ namespace ISC.ViewModel
                 {
                     case EventName.SwitchEasybuilder: { this.SwitchWorkingView(WorkingMode.Easybuilder); break; }
                     case EventName.SwitchSensorstatus: { this.SwitchWorkingView(WorkingMode.Sensorstatus); break; }
-                    case EventName.GetConnected: { this.StepsIndex = 2; break; }
+                    case EventName.SwitchStep: { this.StepsIndex = Convert.ToInt32(e.Value); break; }
                     case EventName.PopupWindow: { General.PopupView(e.Value.ToString()); break; }
                     case EventName.CloseWindow: { General.CloseView(); break; }
                     case EventName.ChangeFileDataLayout: { this.ChangeFileDataLayout((Item)e.Value); break; }

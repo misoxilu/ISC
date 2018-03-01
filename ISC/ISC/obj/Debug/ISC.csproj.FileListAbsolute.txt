@@ -587,3 +587,5 @@ D:\ISC\ISC\ISC\bin\Debug\Global\Resource\Icons\NetworkChild.ico
 D:\ISC\ISC\ISC\bin\Debug\LiveCharts.dll
 D:\ISC\ISC\ISC\bin\Debug\LiveCharts.Wpf.dll
 D:\ISC\ISC\ISC\obj\Debug\Global\Dictionary\Control\ImageEffect.baml
+C:\zhaomin\sourcecode\Others\ISC\ISC\ISC\obj\Debug\View\PaletteView.baml
+C:\zhaomin\sourcecode\Others\ISC\ISC\ISC\obj\Debug\View\PaletteView.g.cs
