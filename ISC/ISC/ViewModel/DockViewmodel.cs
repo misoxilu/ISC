@@ -28,7 +28,7 @@ namespace ISC.ViewModel
 
         public StepsViewmodel StepsViewmodel { get; set; }
 
-        public PaletteViewmodel JobViewmodel { get; set; }
+        public PaletteViewmodel PaletteViewmodel { get; set; }
 
         public void HideSelectionPane()
         {
@@ -41,6 +41,7 @@ namespace ISC.ViewModel
             this.NetworkViewmodel = new NetworkViewmodel();
             this.FileViewmodel = new FileViewmodel();
             this.StepsViewmodel = new StepsViewmodel();
+            this.PaletteViewmodel = new PaletteViewmodel();
         }
     }
 }
