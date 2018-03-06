@@ -15,6 +15,7 @@ namespace ISC.ViewModel
 {
     public class WorkingViewmodel : Base.ViewModel
     {
+        /****测试杨俊GitHub账号****/
         public List<SensorGroup> SensorGroups { get; set; } = General.SensorGroups;
 
         private Grid grid;

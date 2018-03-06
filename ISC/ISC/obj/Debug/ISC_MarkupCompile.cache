@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\zhaomin\sourcecode\Others\ISC\ISC\ISC\obj\Debug\
+E:\ISC\ISC\ISC\obj\Debug\
 ISC
 none
 false
 DEBUG;TRACE
-C:\zhaomin\sourcecode\Others\ISC\ISC\ISC\Global\App.xaml
+E:\ISC\ISC\ISC\Global\App.xaml
 38-2048033619
 31171137829
 61-1163940978
-28232993563
+281347570835
 Global\Dictionary\Control\FileContextMenu.xaml;Global\Dictionary\Control\ImageEffect.xaml;Global\Dictionary\Control\NetworkContextMenu.xaml;Global\Dictionary\Language\en-US.xaml;Global\Dictionary\Language\zh-CN.xaml;Global\Dictionary\Style\Brush.xaml;Global\Dictionary\Style\Button.xaml;Global\Dictionary\Style\ComboBox.xaml;Global\Dictionary\Style\ElipseCheckBox.xaml;Global\Dictionary\Style\Expander.xaml;Global\Dictionary\Icon.xaml;Global\Dictionary\Style\Paths.xaml;Global\Dictionary\Style\ScrollBar.xaml;Global\Dictionary\String\InputGestureTexts.xaml;Global\Dictionary\Style\TextBlock.xaml;Global\Dictionary\Style\TextBox.xaml;Global\Dictionary\Style\ToggleButton.xaml;Global\Dictionary\Style\TreeView.xaml;Global\Dictionary\Template\Control\FileListbox.xaml;Global\Dictionary\Template\Data\FileListbox.xaml;View\DockView.xaml;View\JobView.xaml;View\PaletteView.xaml;View\Popups\LogOnOffView.xaml;View\Popups\RecordPlaybackOptionsView.xaml;View\Selections\EbSelectionView.xaml;View\Selections\StSelectionView.xaml;View\Toolbars\EbtView.xaml;View\FileView.xaml;View\Menus\EasybuilderMenuView.xaml;View\Menus\SensorstatusMenuView.xaml;View\NetworkView.xaml;View\MainWindow.xaml;View\StepContents\GetconnectedView.xaml;View\StepContents\LocatepartView.xaml;View\StepContents\SetupimageView.xaml;View\StepsView.xaml;View\WorkingView.xaml;
 
 False
